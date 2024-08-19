@@ -5,7 +5,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ['master']
+    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,7 +18,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: 'true'
+          submodules: "true"
       - uses: pnpm/action-setup@v3
         with:
           version: 8
@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 21
-          cache: 'pnpm'
+          cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
       - name: Build
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload the whole repo
-          path: '.'
+          path: "."
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
