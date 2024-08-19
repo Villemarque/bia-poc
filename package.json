@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8"
+  },
+  "scripts": {
+    "css": "sass assets/sass:assets/css",
+    "css-w": "sass --watch assets/sass:assets/css",
+    "format": "prettier --log-level warn --write ."
+  }
+}
