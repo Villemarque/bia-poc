@@ -27,7 +27,11 @@ object BIAWebsite {
               li(a(href := "#highlights")("Le BIA")),
               li(a(href := "#features")("Les cours")),
               li(cls := "nav-not-essential", a(href := "#intro")("Nous connaitre")),
-              li(strong(a(href := "https://docs.google.com/forms/d/e/1FAIpQLSdFUCkiHjYpZ714cT6zaPTPSlPBZNL_CmDl9eFY2xCnag6KLQ/viewform")("S'incrire"))),
+              li(
+                strong(
+                  a(href := "https://docs.google.com/forms/d/e/1FAIpQLSdFUCkiHjYpZ714cT6zaPTPSlPBZNL_CmDl9eFY2xCnag6KLQ/viewform")("S'incrire")
+                )
+              ),
               li(cls := "nav-not-essential", a(href := "#footer")("Devenir volontaire"))
             )
           ),
@@ -54,11 +58,8 @@ object BIAWebsite {
                 li("et est reconnu par les différentes fédérations aéronautiques.")
               ),
               p(cls := "style1",
-                "L'examen est un QCM de ", strong("2h30"), ", prévue entre fin mai et début juin. Il y a 20 questions par matière, soit 100 QCM au total, environ 30 minutes par chapitre. ",
-                br,
-                "Une ", strong("épreuve facultative d'anglais aéronautique"), " dont seuls les points supérieurs à 10 sont comptés. ",
-                br,
-                "La note moyenne de chaque candidat est calculée en divisant par cinq la somme des points obtenus."
+                "L'examen est un QCM de ", strong("2h30"), ", prévue entre fin mai et début juin. Il y a 20 questions par matière, soit 100 QCM au total, environ 30 minutes par chapitre. ", br,
+                "Une ", strong("épreuve facultative d'anglais aéronautique"), " dont seuls les points supérieurs à 10 sont comptés. ", br, "La note moyenne de chaque candidat est calculée en divisant par cinq la somme des points obtenus."
               ),
               // The 5 topics of BIA
               div(cls := "row aln-center",
@@ -171,12 +172,9 @@ object BIAWebsite {
             div(cls := "title", "Nous connaitre"),
             div(cls := "container",
               p(cls := "style3",
-                "En 2020, alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses employés en ligne des cours pour se former au Brevet d'Initiation Aéronautique.",
-                br, br,
-                "Répondant à cet appel, l'association « Ambassadeur Aérien Avenir », dite « triple A » est créée, se composants à la fois d'employés d'Air France, de Cadets Air France, et de Elèves Pilotes de Ligne (EPL) de l'ENAC. Cette opération est un grand succès puisque X élèves sont formés.",
-                br, br,
-                "L'opération est reconduite en 2021, et en 2022 l'association prend son indépendance pour s'ouvrir à tous, jeunes et moins jeunes volontaires d'obtenir un premier diplôme aéronautique reconnu par l'Etat.",
-                br,
+                "En 2020, alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses employés en ligne des cours pour se former au Brevet d'Initiation Aéronautique.", br, br,
+                "Répondant à cet appel, l'association « Ambassadeur Aérien Avenir », dite « triple A » est créée, se composants à la fois d'employés d'Air France, de Cadets Air France, et de Elèves Pilotes de Ligne (EPL) de l'ENAC. Cette opération est un grand succès puisque X élèves sont formés.", br, br,
+                "L'opération est reconduite en 2021, et en 2022 l'association prend son indépendance pour s'ouvrir à tous, jeunes et moins jeunes volontaires d'obtenir un premier diplôme aéronautique reconnu par l'Etat.", br,
                 "Le profil des professeurs bénévoles s'est aussi diversifié comprenant des pilotes de multiples compagnies, mais aussi personnels navigants de cabine, ingénieurs, dispatcheurs, instructeurs planeur, et d'autres ! Mettant à profit leurs diverses expériences au service des élèves."
               )
             )
@@ -189,10 +187,8 @@ object BIAWebsite {
               header(cls := "style1",
                 h2("Envie de devenir professeur bénévole ?"),
                 p(
-                  "Quelque soit votre domaine d'activité, si vous souhaitez partager votre passion pour l'aéronautique, vous êtes le bienvenu !",
-                  br, br,
-                  "Nous proposons un ", strong("programme adaptable"), " à vos disponibilités, et de ", strong("nombreuses facilités"), " pour alléger la préparation des cours.",
-                  br, br,
+                  "Quelque soit votre domaine d'activité, si vous souhaitez partager votre passion pour l'aéronautique, vous êtes le bienvenu !", br, br,
+                  "Nous proposons un ", strong("programme adaptable"), " à vos disponibilités, et de ", strong("nombreuses facilités"), " pour alléger la préparation des cours.", br, br,
                   a(href := "#")("N'hésitez pas à nous contacter pour de plus amples informations !")
                 )
               ),
