@@ -1,28 +1,18 @@
-//> using scala "3.3.1"
-//> using lib "com.lihaoyi::scalatags:0.12.0"
+//> using scala "3.5.0"
+//> using dep "com.lihaoyi::scalatags:0.13.1"
 
 import scalatags.Text.all._
-import scalatags.Text.tags2.{title, style}
+import scalatags.Text.tags2.{title, style, section}
 
 object BIAWebsite {
   def main(args: Array[String]): Unit = {
-    val content = html(
+    val pageHtml = html(
       head(
         title("BIA par Triple A"),
         meta(charset := "utf-8"),
         meta(name := "viewport", content := "width=device-width, initial-scale=1, user-scalable=no"),
         link(rel := "stylesheet", href := "assets/css/main.css"),
         link(rel := "icon", href := "images/logo.svg"),
-        style(
-          """
-          .no-top-line::before {
-            content: none !important;
-          }
-          .no-top-line {
-            border-top: none !important;
-          }
-          """
-        )
       ),
       body(cls := "homepage is-preload",
         div(id := "page-wrapper",
@@ -191,6 +181,6 @@ object BIAWebsite {
     )
 
     println("<!DOCTYPE html>")
-    println(content.render)
+    println(pageHtml.render)
   }
 }
