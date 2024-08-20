@@ -19,9 +19,9 @@
     line-height: 1;
     text-transform: none !important;
 
-    @if $category == brands {
+    @if ($category == brands) {
       font-family: "Font Awesome 5 Brands";
-    } @else if $category == solid {
+    } @else if ($category == solid) {
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
     } @else {

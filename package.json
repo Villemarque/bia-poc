@@ -8,9 +8,5 @@
     "css-w": "sass --watch assets/sass:assets/css",
     "build": "sass assets/sass:assets/css",
     "format": "prettier --log-level warn --write ."
-  },
-  "devDependencies": {
-    "stylelint": "^16.8.2",
-    "stylelint-config-standard-scss": "^13.1.0"
   }
 }

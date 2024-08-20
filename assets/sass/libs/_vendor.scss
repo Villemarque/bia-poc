@@ -289,18 +289,15 @@ $vendor-values: (
 /// Wraps @content in vendorized keyframe blocks.
 /// @param {string} $name Name.
 @mixin keyframes($name) {
-  @keyframes #{$name} {
+  @-moz-keyframes #{$name} {
     @content;
   }
-
-  @keyframes #{$name} {
+  @-webkit-keyframes #{$name} {
     @content;
   }
-
-  @keyframes #{$name} {
+  @-ms-keyframes #{$name} {
     @content;
   }
-
   @keyframes #{$name} {
     @content;
   }
