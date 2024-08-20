@@ -13,23 +13,28 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-// Breakpoints
-$breakpoints: (
-  xlarge: 1281px,
-  large: 981px,
-  medium: 737px,
-  small: 736px
-);
+// Breakpoints.
 
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
-      @content;
-    }
-  } @else {
-    @warn "Unknown breakpoint: #{$breakpoint}.";
-  }
-}
+@include breakpoints(
+  (
+    xlarge: (
+      1281px,
+      1680px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      737px,
+      980px,
+    ),
+    small: (
+      null,
+      736px,
+    ),
+  )
+);
 
 // Reset.
 // Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
@@ -306,19 +311,19 @@ form {
   max-width: 100%;
   width: 68em;
 
-  @include respond-to(xlarge) {
+  @include breakpoint("<=xlarge") {
     width: 70em;
   }
 
-  @include respond-to(large) {
+  @include breakpoint("<=large") {
     width: calc(100% - 100px);
   }
 
-  @include respond-to(medium) {
+  @include breakpoint("<=medium") {
     width: calc(100% - 100px);
   }
 
-  @include respond-to(small) {
+  @include breakpoint("<=small") {
     width: calc(100% - 40px);
   }
 }
@@ -328,19 +333,19 @@ form {
 .row {
   @include html-grid((50px, 50px));
 
-  @include respond-to(xlarge) {
+  @include breakpoint("<=xlarge") {
     @include html-grid((50px, 50px), "xlarge");
   }
 
-  @include respond-to(large) {
+  @include breakpoint("<=large") {
     @include html-grid((35px, 35px), "large");
   }
 
-  @include respond-to(medium) {
+  @include breakpoint("<=medium") {
     @include html-grid((50px, 50px), "medium");
   }
 
-  @include respond-to(small) {
+  @include breakpoint("<=small") {
     @include html-grid((30px, 30px), "small");
   }
 }
@@ -1074,9 +1079,10 @@ ul.actions {
   }
 }
 
-/* Responsive Styles */
+/* XLarge */
 
-@include respond-to(xlarge) {
+@include breakpoint("<=xlarge") {
+  /* Basic */
   body,
   input,
   textarea,
@@ -1085,7 +1091,11 @@ ul.actions {
   }
 }
 
-@include respond-to(large) {
+/* Large */
+
+@include breakpoint("<=large") {
+  /* Basic */
+
   body,
   input,
   select,
@@ -1095,9 +1105,13 @@ ul.actions {
     letter-spacing: 0.015em;
   }
 
+  /* Wrapper */
+
   .wrapper {
     padding: 4em 0 7em 0;
   }
+
+  /* Logo */
 
   #logo {
     margin-top: -0.5em !important;
@@ -1106,6 +1120,8 @@ ul.actions {
       font-size: 1.75em;
     }
   }
+
+  /* Intro */
 
   #intro {
     padding-bottom: 7em;
@@ -1119,6 +1135,8 @@ ul.actions {
     }
   }
 
+  /* Footer */
+
   #footer {
     padding-bottom: 4em;
 
@@ -1130,6 +1148,8 @@ ul.actions {
       }
     }
   }
+
+  /* Copyright */
 
   #copyright {
     padding-top: 4em;
