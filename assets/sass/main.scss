@@ -876,7 +876,6 @@ ul.actions {
     display: inline-block;
     border-radius: 0.35em;
     box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-    padding: 0 1.5em 0 1.5em;
 
     > li {
       display: inline-block;
@@ -1174,6 +1173,16 @@ ul.actions {
     }
   }
 
+  /* Nav */
+
+  #nav {
+    > ul {
+      > li {
+        padding: 0 1.2em 0 1.2em;
+      }
+    }
+  }
+
   /* Form */
 
   form {
@@ -1194,14 +1203,6 @@ ul.actions {
     > .row > :first-child > section {
       border-top: 0;
       padding-top: 0;
-    }
-  }
-
-  /* Nav */
-
-  #nav {
-    .nav-not-essential {
-      display: none;
     }
   }
 
@@ -1341,6 +1342,14 @@ ul.actions {
         display: block;
         margin: 0;
       }
+    }
+  }
+
+  /* Nav */
+
+  #nav {
+    .nav-not-essential {
+      display: none;
     }
   }
 
