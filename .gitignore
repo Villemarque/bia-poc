@@ -4,3 +4,6 @@ assets/css/main.css
 assets/css/main.css.map
 .aider*
 .env
+.bsp/*
+.scala-build/*
+index2.html
