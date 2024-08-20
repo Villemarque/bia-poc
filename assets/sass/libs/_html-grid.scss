@@ -14,7 +14,7 @@
   // Suffixes.
   $suffixes: null;
 
-  @if (type-of($suffix) == "list") {
+  @if type-of($suffix) == "list" {
     $suffixes: $suffix;
   } @else {
     $suffixes: ($suffix);
@@ -24,7 +24,7 @@
   $guttersCols: null;
   $guttersRows: null;
 
-  @if (type-of($gutters) == "list") {
+  @if type-of($gutters) == "list" {
     $guttersCols: nth($gutters, 1);
     $guttersRows: nth($gutters, 2);
   } @else {
@@ -80,7 +80,7 @@
   // Step through suffixes.
   @each $suffix in $suffixes {
     // Suffix.
-    @if ($suffix != "") {
+    @if $suffix != "" {
       $suffix: "-" + $suffix;
     } @else {
       $suffix: "";
@@ -109,7 +109,7 @@
       // Gutters.
       $class: null;
 
-      @if ($multiplier != 1) {
+      @if $multiplier != 1 {
         $class: ".gtr-" + ($multiplier * 100);
       }
 
