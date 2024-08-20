@@ -107,85 +107,33 @@ object BIAWebsite {
               // The 5 topics of BIA
               div(
                 cls := "row aln-center",
-                div(
-                  cls := "col-4 col-12-medium",
-                  section(
-                    cls := "highlight",
-                    a(
-                      href := "#",
-                      cls := "image featured",
-                      img(src := "images/aeronefs.png", alt := "")
-                    ),
-                    h3(a(href := "#")("Connaissance des aéronefs")),
-                    p(
-                      "Découverte des différents aéronefs qui existent ! Etude des parties d’un avion, explication des différents types de moteurs, ainsi que des différents instruments que l’on retrouve dans un cockpit."
-                    )
-                  )
+                topic(
+                  "Connaissance des aéronefs",
+                  "images/aeronefs.png",
+                  "Découverte des différents aéronefs qui existent ! Etude des parties d’un avion, explication des différents types de moteurs, ainsi que des différents instruments que l’on retrouve dans un cockpit."
                 ),
-                div(
-                  cls := "col-4 col-12-medium",
-                  section(
-                    cls := "highlight",
-                    a(
-                      href := "#",
-                      cls := "image featured",
-                      img(src := "images/aerodynamic.jpeg", alt := "")
-                    ),
-                    h3(a(href := "#")("Aérodynamique et principes du vol")),
-                    p(
-                      "Initiation à la mécanique du vol, découverte des différentes forces qui impactent un aéronef. Les attendus sont qualitatifs, il n’y a pas d’équations à résoudre."
-                    )
-                  )
+                topic(
+                  "Aérodynamique et principes du vol",
+                  "images/aerodynamic.jpeg",
+                  "Initiation à la mécanique du vol, découverte des différentes forces qui impactent un aéronef. Les attendus sont qualitatifs, il n’y a pas d’équations à résoudre."
                 ),
-                div(
-                  cls := "col-4 col-12-medium",
-                  section(
-                    cls := "highlight",
-                    a(
-                      href := "#",
-                      cls := "image featured",
-                      img(src := "images/meteo.jpg", alt := "")
-                    ),
-                    h3(a(href := "#")("Météorologie")),
-                    p(
-                      "Etude des phénomènes météo ! L’atmosphère, les différents type de nuages, précipitation, mais aussi découverte des fronts, masses d’air, et incitation à la circulation générale atmosphérique."
-                    )
-                  )
+                topic(
+                  "Météorologie",
+                  "images/meteo.jpg",
+                  "Etude des phénomènes météo ! L’atmosphère, les différents type de nuages, précipitation, mais aussi découverte des fronts, masses d’air, et incitation à la circulation générale atmosphérique."
                 )
               ),
               div(
                 cls := "row aln-center",
-                div(
-                  cls := "col-4 col-12-medium",
-                  section(
-                    cls := "highlight",
-                    a(
-                      href := "#",
-                      cls := "image featured",
-                      img(src := "images/nav.jpg", alt := "")
-                    ),
-                    h3("Réglementation, sécurité des vols, navigation"),
-                    p(
-                      "Découverte des organisations qui gèrent la réglementation et la gestion de l’espace aérien. Description des facteurs contributifs aux incidents/accidents. Etude des différents moyen de navigation. Préparation d’une navigation en vol d’aéroclub."
-                    )
-                  )
+                topic(
+                  "Réglementation, sécurité des vols, navigation",
+                  "images/nav.jpg",
+                  "Découverte des organisations qui gèrent la réglementation et la gestion de l’espace aérien. Description des facteurs contributifs aux incidents/accidents. Etude des différents moyen de navigation. Préparation d’une navigation en vol d’aéroclub."
                 ),
-                div(
-                  cls := "col-4 col-12-medium",
-                  section(
-                    cls := "highlight",
-                    a(
-                      href := "#",
-                      cls := "image featured",
-                      img(src := "images/histoire.jpeg", alt := "")
-                    ),
-                    h3(
-                      a(href := "#")("Histoire de l’aéronautique et du spatial")
-                    ),
-                    p(
-                      "Etude chronologique des faits marquants de l’histoire de l’aviation, du mythe d’Icare aux pionniers du XXème, à nos jours, en passant par les avancées militaires. La conquête spatiale est aussi au programme."
-                    )
-                  )
+                topic(
+                  "Histoire de l’aéronautique et du spatial",
+                  "images/histoire.jpeg",
+                  "Etude chronologique des faits marquants de l’histoire de l’aviation, du mythe d’Icare aux pionniers du XXème, à nos jours, en passant par les avancées militaires. La conquête spatiale est aussi au programme."
                 )
               )
             )
@@ -373,16 +321,16 @@ object BIAWebsite {
     println(pageHtml)
   }
 
-  private def topic(title: String, imgPath: String, description: String): Frag = {
+  private def topic(
+      title: String,
+      imgPath: String,
+      description: String
+  ): Frag = {
     div(
       cls := "col-4 col-12-medium",
       section(
         cls := "highlight",
-        a(
-          href := "#",
-          cls := "image featured",
-          img(src := imgPath, alt := "")
-        ),
+        img(src := imgPath, cls := "image featured", alt := ""),
         h3(a(href := "#")(title)),
         p(description)
       )
