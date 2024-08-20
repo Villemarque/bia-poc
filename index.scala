@@ -59,49 +59,63 @@ object BIAWebsite {
               ),
               // The 5 topics of BIA
               div(cls := "row aln-center",
-                div(cls := "col-4 col-6-medium col-12-small",
+                div(cls := "col-4 col-12-medium",
                   section(cls := "highlight",
                     a(href := "#", cls := "image featured",
                       img(src := "images/aeronefs.png", alt := "")
                     ),
-                    h3("Aéronefs"),
-                    p("Étude des différents types d'aéronefs, de leur structure et de leurs systèmes.")
+                    h3(a(href := "#")("Connaissance des aéronefs")),
+                    p(
+                      "Découverte des différents aéronefs qui existent ! Etude des parties d'un avion, explication des différents types de moteurs, ainsi que des différents instruments que l'on retrouve dans un cockpit."
+                    )
                   )
                 ),
-                div(cls := "col-4 col-6-medium col-12-small",
+                div(cls := "col-4 col-12-medium",
                   section(cls := "highlight",
                     a(href := "#", cls := "image featured",
                       img(src := "images/aerodynamic.jpeg", alt := "")
                     ),
-                    h3("Aérodynamique"),
-                    p("Principes physiques du vol, forces agissant sur un aéronef et mécanique du vol.")
+                    h3(a(href := "#")("Aérodynamique et principes du vol")),
+                    p(
+                      "Initiation à la mécanique du vol, découverte des différentes forces qui impactent un aéronef. Les attendus sont qualitatifs, il n'y a pas d'équations à résoudre."
+                    )
                   )
                 ),
-                div(cls := "col-4 col-6-medium col-12-small",
+                div(cls := "col-4 col-12-medium",
                   section(cls := "highlight",
                     a(href := "#", cls := "image featured",
                       img(src := "images/meteo.jpg", alt := "")
                     ),
-                    h3("Météorologie"),
-                    p("Phénomènes atmosphériques, prévisions météorologiques et leur impact sur le vol.")
+                    h3(a(href := "#")("Météorologie")),
+                    p(
+                      "Etude des phénomènes météo ! L'atmosphère, les différents type de nuages, précipitation, mais aussi découverte des fronts, masses d'air, et incitation à la circulation générale atmosphérique."
+                    )
                   )
-                ),
-                div(cls := "col-4 col-6-medium col-12-small",
+                )
+              ),
+              div(cls := "row aln-center",
+                div(cls := "col-4 col-12-medium",
                   section(cls := "highlight",
                     a(href := "#", cls := "image featured",
                       img(src := "images/nav.jpg", alt := "")
                     ),
-                    h3("Navigation"),
-                    p("Techniques de navigation aérienne, lecture de cartes et planification de vol.")
+                    h3("Réglementation, sécurité des vols, navigation"),
+                    p(
+                      "Découverte des organisations qui gèrent la réglementation et la gestion de l'espace aérien. Description des facteurs contributifs aux incidents/accidents. Etude des différents moyen de navigation. Préparation d'une navigation en vol d'aéroclub."
+                    )
                   )
                 ),
-                div(cls := "col-4 col-6-medium col-12-small",
+                div(cls := "col-4 col-12-medium",
                   section(cls := "highlight",
                     a(href := "#", cls := "image featured",
                       img(src := "images/histoire.jpeg", alt := "")
                     ),
-                    h3("Histoire"),
-                    p("Histoire de l'aviation, des pionniers aux développements modernes de l'aéronautique.")
+                    h3(
+                      a(href := "#")("Histoire de l'aéronautique et du spatial")
+                    ),
+                    p(
+                      "Etude chronologique des faits marquants de l'histoire de l'aviation, du mythe d'Icare aux pionniers du XXème, à nos jours, en passant par les avancées militaires. La conquête spatiale est aussi au programme."
+                    )
                   )
                 )
               )
