@@ -331,7 +331,7 @@ object BIAWebsite {
       section(
         cls := "highlight",
         img(src := imgPath, cls := "image featured", alt := ""),
-        h3(a(href := "#")(title)),
+        h3(title),
         p(description)
       )
     )
