@@ -64,7 +64,8 @@ object BIAWebsite {
                     a(href := "#", cls := "image featured",
                       img(src := "images/aeronefs.png", alt := "")
                     ),
-                    h3("Aéronefs")
+                    h3("Aéronefs"),
+                    p("Étude des différents types d'aéronefs, de leur structure et de leurs systèmes.")
                   )
                 ),
                 div(cls := "col-4 col-6-medium col-12-small",
@@ -72,7 +73,8 @@ object BIAWebsite {
                     a(href := "#", cls := "image featured",
                       img(src := "images/aerodynamic.jpeg", alt := "")
                     ),
-                    h3("Aérodynamique")
+                    h3("Aérodynamique"),
+                    p("Principes physiques du vol, forces agissant sur un aéronef et mécanique du vol.")
                   )
                 ),
                 div(cls := "col-4 col-6-medium col-12-small",
@@ -80,7 +82,8 @@ object BIAWebsite {
                     a(href := "#", cls := "image featured",
                       img(src := "images/meteo.jpg", alt := "")
                     ),
-                    h3("Météorologie")
+                    h3("Météorologie"),
+                    p("Phénomènes atmosphériques, prévisions météorologiques et leur impact sur le vol.")
                   )
                 ),
                 div(cls := "col-4 col-6-medium col-12-small",
@@ -88,7 +91,8 @@ object BIAWebsite {
                     a(href := "#", cls := "image featured",
                       img(src := "images/nav.jpg", alt := "")
                     ),
-                    h3("Navigation")
+                    h3("Navigation"),
+                    p("Techniques de navigation aérienne, lecture de cartes et planification de vol.")
                   )
                 ),
                 div(cls := "col-4 col-6-medium col-12-small",
@@ -96,7 +100,8 @@ object BIAWebsite {
                     a(href := "#", cls := "image featured",
                       img(src := "images/histoire.jpeg", alt := "")
                     ),
-                    h3("Histoire")
+                    h3("Histoire"),
+                    p("Histoire de l'aviation, des pionniers aux développements modernes de l'aéronautique.")
                   )
                 )
               )
