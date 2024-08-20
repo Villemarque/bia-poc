@@ -6,13 +6,16 @@ import scalatags.Text.tags2.{title, style, section}
 
 object BIAWebsite {
   def main(args: Array[String]): Unit = {
-    val pageHtml = html(
+    val pageHtml = "<!DOCTYPE html>" + html(
       head(
         title("BIA par Triple A"),
         meta(charset := "utf-8"),
-        meta(name := "viewport", content := "width=device-width, initial-scale=1, user-scalable=no"),
+        meta(
+          name := "viewport",
+          content := "width=device-width, initial-scale=1, user-scalable=no"
+        ),
         link(rel := "stylesheet", href := "assets/css/main.css"),
-        link(rel := "icon", href := "images/logo.svg"),
+        link(rel := "icon", href := "images/logo.svg")
       ),
       body(cls := "homepage is-preload",
         div(id := "page-wrapper",
@@ -240,9 +243,8 @@ object BIAWebsite {
           )
         )
       )
-    )
+    ).render
 
-    println("<!DOCTYPE html>")
-    println(pageHtml.render)
+    println(pageHtml)
   }
 }
