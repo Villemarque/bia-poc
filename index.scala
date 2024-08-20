@@ -57,7 +57,49 @@ object BIAWebsite {
                 br,
                 "La note moyenne de chaque candidat est calculée en divisant par cinq la somme des points obtenus."
               ),
-              // ... (continue with the rest of the highlights section)
+              // The 5 topics of BIA
+              div(cls := "row aln-center",
+                div(cls := "col-4 col-6-medium col-12-small",
+                  section(cls := "highlight",
+                    a(href := "#", cls := "image featured",
+                      img(src := "images/aeronefs.png", alt := "")
+                    ),
+                    h3("Aéronefs")
+                  )
+                ),
+                div(cls := "col-4 col-6-medium col-12-small",
+                  section(cls := "highlight",
+                    a(href := "#", cls := "image featured",
+                      img(src := "images/aerodynamic.jpeg", alt := "")
+                    ),
+                    h3("Aérodynamique")
+                  )
+                ),
+                div(cls := "col-4 col-6-medium col-12-small",
+                  section(cls := "highlight",
+                    a(href := "#", cls := "image featured",
+                      img(src := "images/meteo.jpg", alt := "")
+                    ),
+                    h3("Météorologie")
+                  )
+                ),
+                div(cls := "col-4 col-6-medium col-12-small",
+                  section(cls := "highlight",
+                    a(href := "#", cls := "image featured",
+                      img(src := "images/nav.jpg", alt := "")
+                    ),
+                    h3("Navigation")
+                  )
+                ),
+                div(cls := "col-4 col-6-medium col-12-small",
+                  section(cls := "highlight",
+                    a(href := "#", cls := "image featured",
+                      img(src := "images/histoire.jpeg", alt := "")
+                    ),
+                    h3("Histoire")
+                  )
+                )
+              )
             )
           ),
 
