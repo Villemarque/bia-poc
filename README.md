@@ -6,6 +6,9 @@
 to generate CSS
 `pnpm sass assets/sass/main.scss assets/css/main.css`
 
+to generate the HTML, you need a working JVM, with `scala-cli` installed.
+Then `scala-cli index.scala > index.html`
+
 ## Credits:
 
 - Template: https://html5up.net/escape-velocity
