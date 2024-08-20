@@ -1200,7 +1200,9 @@ ul.actions {
   /* Nav */
 
   #nav {
-    display: none;
+    .nav-not-essential {
+      display: none;
+    }
   }
 
   /* Logo */
