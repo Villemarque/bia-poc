@@ -9,7 +9,7 @@ to generate CSS
 ## Credits:
 
 - Template: https://html5up.net/escape-velocity
-- Icons: ont Awesome (fontawesome.io)
+- Icons: Font Awesome (fontawesome.io)
 
 ## License
 
