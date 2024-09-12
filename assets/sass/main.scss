@@ -512,6 +512,7 @@ button,
   }
 
   &.style1 {
+    background: #e97770 url("images/overlay.png");
     color: #fff;
 
     &:hover {
@@ -538,6 +539,7 @@ button,
   }
 
   &.style3 {
+    background: #2f333b url("images/overlay.png");
     color: #fff;
 
     &:hover {
@@ -660,6 +662,21 @@ ul.actions {
     margin: -0.35em 0 0.75em 0;
     font-size: 1.15em;
     letter-spacing: 0.05em;
+
+    &:before {
+      display: block;
+      color: #fff;
+      background: #2f333b url("images/overlay.png");
+      border-radius: 2.5em;
+      text-align: center;
+      width: 2.5em;
+      height: 2.5em;
+      line-height: 2.5em;
+      margin-right: 0.75em;
+      position: absolute;
+      left: 0;
+      margin-top: -0.5em;
+    }
   }
 
   &.small {
@@ -728,6 +745,7 @@ ul.actions {
       left: -35px;
       width: 35px;
       height: 38px;
+      background: url("images/shadow.png");
     }
 
     &:after {
@@ -738,14 +756,17 @@ ul.actions {
       right: -35px;
       width: 35px;
       height: 38px;
+      background: url("images/shadow.png");
     }
   }
 
   &.style1 {
+    background: #e97770 url("images/overlay.png");
     color: #eee;
     color: rgba(255, 255, 255, 0.75);
 
     .title {
+      background: #e97770 url("images/overlay.png");
       color: #fff;
     }
 
@@ -966,6 +987,7 @@ ul.actions {
 /* Footer */
 
 #footer {
+  background: #282b34 url("images/overlay.png");
   color: #eee;
   color: rgba(255, 255, 255, 0.5);
   padding-bottom: 6em;
@@ -988,6 +1010,7 @@ ul.actions {
   }
 
   .title {
+    background: #282b34 url("images/overlay.png");
     color: #eee;
   }
 
@@ -1259,6 +1282,7 @@ ul.actions {
     top: 0;
     width: _size(navPanel);
     z-index: _misc(z-index-base) + 2;
+    background: #242730 url("images/overlay.png");
     box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
   }
 }
