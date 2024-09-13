@@ -651,7 +651,7 @@ ul.actions {
   }
 
   @include breakpoint(">medium") {
-    > .row > :nth-child(-n + 2) > section {
+    section {
       border-top: 0;
       padding-top: 0;
     }
