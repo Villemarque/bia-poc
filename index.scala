@@ -212,10 +212,10 @@ object BIAWebsite {
               cls := "container",
               p(
                 cls := "style3",
-                "En 2020, alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses employés en ligne des cours pour se former au Brevet d’Initiation Aéronautique.",
+                "En 2020, alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
                 br,
                 br,
-                "Répondant à cet appel, l’association « Ambassadeur Aérien Avenir », dite « triple A » est créée, se composants à la fois d’employés d’Air France, de Cadets Air France, et de Elèves Pilotes de Ligne (EPL) de l’ENAC. Cette opération est un grand succès puisque X élèves sont formés.",
+                "Répondant à cet appel, l’association « Aérien Ambassadeur Avenir », dite « triple A » est créée, se composant à la fois d’employés d’Air France, de Cadets Air France, et de Elèves Pilotes de Ligne (EPL) de l’ENAC. Cette opération est un grand succès puisque X élèves sont formés.",
                 br,
                 br,
                 "L’opération est reconduite en 2021, et en 2022 l’association prend son indépendance pour s’ouvrir à tous, jeunes et moins jeunes volontaires d’obtenir un premier diplôme aéronautique reconnu par l’Etat.",
