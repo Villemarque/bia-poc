@@ -146,8 +146,7 @@ object BIAWebsite {
             div(cls := "title", "Les cours"),
             div(
               cls := "container",
-              a(
-                href := "#",
+              div(
                 cls := "image featured",
                 img(src := "images/laptop-throttle.png", alt := "")
               ),
