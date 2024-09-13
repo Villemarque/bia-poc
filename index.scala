@@ -135,7 +135,8 @@ object BIAWebsite {
                   "images/histoire.jpeg",
                   "Etude chronologique des faits marquants de l’histoire de l’aviation, du mythe d’Icare aux pionniers du XXème, à nos jours, en passant par les avancées militaires. La conquête spatiale est aussi au programme."
                 )
-              )
+              ),
+              inscriptionButton
             )
           ),
 
@@ -189,16 +190,7 @@ object BIAWebsite {
                     )
                   )
                 ),
-                ul(
-                  cls := "actions special",
-                  li(
-                    a(
-                      href := inscriptionLink,
-                      cls := "button style1 large",
-                      "S’inscrire"
-                    )
-                  )
-                )
+                inscriptionButton
               )
             )
           ),
@@ -319,6 +311,19 @@ object BIAWebsite {
 
     println(pageHtml)
   }
+
+  // TODO, refactor SCSS so that it can really a button, and without the need of ul, li container
+  private def inscriptionButton =
+    ul(
+      cls := "actions special",
+      li(
+        a(
+          href := inscriptionLink,
+          cls := "button style1 large",
+          "S’inscrire"
+        )
+      )
+    )
 
   private def topic(
       title: String,
