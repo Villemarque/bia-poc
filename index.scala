@@ -63,7 +63,7 @@ object BIAWebsite {
                   "cours du BIA en visio, gratuit, pour tous"
                 )
               ),
-              p("Par l’association Ambassadeur Aérien Avenir")
+              p("Par l’association Aérien Ambassadeur Avenir")
             )
           ),
 
