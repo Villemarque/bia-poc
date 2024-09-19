@@ -180,18 +180,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  // Stops initial animations until page loads.
-  &.is-preload {
-    *,
-    *:before,
-    *:after {
-      @include vendor("animation", "none !important");
-      @include vendor("transition", "none !important");
-    }
-  }
-}
-
 body,
 input,
 textarea,
