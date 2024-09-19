@@ -7,6 +7,8 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
 
+@import "nav";
+@import "logo";
 /*
 	Escape Velocity by HTML5 UP
 	html5up.net | @ajlkn
@@ -824,93 +826,7 @@ ul.actions {
   padding: 0;
 }
 
-/* Logo */
 
-#logo {
-  width: 100%;
-  text-align: center;
-  position: relative;
-  top: 1.5em;
-
-  h1 {
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 2em;
-    letter-spacing: 0.25em;
-  }
-
-  p {
-    color: #eee;
-    color: rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    margin: 1.25em 0 0 0;
-    display: block;
-    letter-spacing: 0.2em;
-    font-size: 0.9em;
-  }
-}
-
-/* Nav */
-
-#nav {
-  position: fixed;
-  display: inline-block;
-  top: 0;
-  width: 100%;
-  height: 3.5em; // why does it need to be set, how to shrink to fit?
-  text-align: center;
-  z-index: 1050;
-  background: linear-gradient(to top, #242736, #244c7b);
-
-  .nav-logo {
-    position: fixed;
-    height: 3.2em;
-    left: 0;
-    color: #fff;
-  }
-
-  > ul {
-    display: inline-block;
-    border-radius: 0.35em;
-    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-
-    > li {
-      display: inline-block;
-      text-align: center;
-      padding: 0 1.5em 0 1.5em;
-
-      // for dropdown
-      > ul {
-        display: none;
-      }
-
-      > a,
-      > span {
-        display: block;
-        color: rgba(255, 255, 255, 0.75);
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 0.7em;
-        letter-spacing: 0.25em;
-        height: 5em;
-        line-height: 5em;
-        -moz-transition: all 0.25s ease-in-out;
-        -webkit-transition: all 0.25s ease-in-out;
-        -o-transition: all 0.25s ease-in-out;
-        -ms-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out;
-        outline: 0;
-      }
-
-      &:hover {
-        > a {
-          color: #fff;
-        }
-      }
-    }
-  }
-}
 
 /* Intro */
 
@@ -975,11 +891,6 @@ ul.actions {
       letter-spacing: 0.05em;
     }
   }
-}
-
-/* Main */
-
-#main {
 }
 
 /* Footer */
@@ -1153,13 +1064,6 @@ ul.actions {
     padding-top: 4em;
     margin-top: 4em;
   }
-}
-
-/* Medium */
-
-#navPanel,
-#titleBar {
-  display: none;
 }
 
 @include breakpoint("<=medium") {

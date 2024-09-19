@@ -1,0 +1,58 @@
+#nav {
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  width: 100%;
+  height: 3.5em; // why does it need to be set, how to shrink to fit?
+  text-align: center;
+  z-index: 1050;
+  background: linear-gradient(to top, #242736, #244c7b);
+
+  .nav-logo {
+    position: fixed;
+    height: 3.2em;
+    left: 0;
+    color: #fff;
+  }
+
+  > ul {
+    display: inline-block;
+    border-radius: 0.35em;
+    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+
+    > li {
+      display: inline-block;
+      text-align: center;
+      padding: 0 1.5em 0 1.5em;
+
+      // for dropdown
+      > ul {
+        display: none;
+      }
+
+      > a,
+      > span {
+        display: block;
+        color: rgba(255, 255, 255, 0.75);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.7em;
+        letter-spacing: 0.25em;
+        height: 5em;
+        line-height: 5em;
+        -moz-transition: all 0.25s ease-in-out;
+        -webkit-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        -ms-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        outline: 0;
+      }
+
+      &:hover {
+        > a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

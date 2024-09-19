@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
+    "commander": "^12.1.0",
     "pixelmatch": "^6.0.0",
     "pngjs": "^7.0.0",
     "prettier": "^3.3.3",

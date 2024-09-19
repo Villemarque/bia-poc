@@ -1,0 +1,26 @@
+/* Logo */
+
+#logo {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 1.5em;
+
+  h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 0.25em;
+  }
+
+  p {
+    color: #eee;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    margin: 1.25em 0 0 0;
+    display: block;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+  }
+}
