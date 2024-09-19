@@ -49,7 +49,9 @@ const differentScreenshots = (baseline, screenshot, name) => {
 
 // return true if changed
 const takeScreenshot = async (url, page, widthName, width, forceBaseline) => {
-  const viewportHeight = 800; // You can set a default height, it won't affect the full-page screenshot
+  // fixed viewport height instead of taking full page picture because `pixelmatch`
+  // need images to have the same dimensions, and modifying css often has an impact of length
+  const viewportHeight = 7000; 
   await page.setViewport({ width: width, height: viewportHeight });
   await page.goto(url, { waitUntil: "networkidle0" });
   const screenshotName = `${widthName}.png`;
@@ -58,7 +60,7 @@ const takeScreenshot = async (url, page, widthName, width, forceBaseline) => {
   const path = baselineExists ? `pics/new/${screenshotName}` : baseline;
   await page.screenshot({
     path: path,
-    fullPage: true,
+    //fullPage: true,
   });
 
   if (baselineExists) {
