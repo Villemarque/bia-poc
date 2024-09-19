@@ -334,19 +334,19 @@ form {
 .row {
   @include html-grid((50px, 50px));
 
-  @include breakpoint("<=xlarge") {
+  @media (max-width: at-most($xlarge)) {
     @include html-grid((50px, 50px), "xlarge");
   }
 
-  @include breakpoint("<=large") {
+  @media (max-width: at-most($large)){
     @include html-grid((35px, 35px), "large");
   }
 
-  @include breakpoint("<=medium") {
+  @media (max-width: at-most($medium)) {
     @include html-grid((50px, 50px), "medium");
   }
 
-  @include breakpoint("<=small") {
+  @media (max-width: at-most($small)) {
     @include html-grid((30px, 30px), "small");
   }
 }

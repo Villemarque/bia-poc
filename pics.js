@@ -62,7 +62,7 @@ const takeScreenshot = async (url, page, widthName, width, forceBaseline) => {
   const path = baselineExists ? `pics/new/${screenshotName}` : baseline;
   await page.screenshot({
     path: path,
-    //fullPage: true,
+    // fullPage: true,
   });
 
   if (baselineExists) {
