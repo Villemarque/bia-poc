@@ -989,7 +989,7 @@ ul.actions {
 
 /* XLarge */
 
-@include breakpoint("<=xlarge") {
+@media (max-width: at-most($xlarge)) {
   /* Basic */
   body,
   input,
@@ -1001,7 +1001,7 @@ ul.actions {
 
 /* Large */
 
-@include breakpoint("<=large") {
+@media (max-width: at-most($large)) {
   /* Basic */
 
   body,
