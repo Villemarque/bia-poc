@@ -4,10 +4,12 @@ import { PNG } from "pngjs";
 import pixelmatch from "pixelmatch";
 import fs from "fs";
 
+// intentionally not taking close to media-queries division
+// to avoid threshold effect
 const widthObj = {
-  xlarge: 1680,
-  large: 1280,
-  medium: 980,
+  xlarge: 1440, // desktop
+  large: 1024, // ipad landscape, laptop
+  medium: 800, // ipad portrait?
   small: 360, // smaller iphones
 };
 
