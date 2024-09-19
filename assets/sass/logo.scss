@@ -12,6 +12,9 @@
     color: #fff;
     font-size: 2em;
     letter-spacing: 0.25em;
+    @media (max-width: at-most($large)) {
+      font-size: 1.75em;
+    }
   }
 
   p {
@@ -22,5 +25,9 @@
     display: block;
     letter-spacing: 0.2em;
     font-size: 0.9em;
+  }
+
+  @media (max-width: at-most($large)) {
+    margin-top: -0.5em !important;
   }
 }
