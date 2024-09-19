@@ -8,7 +8,13 @@ const widthObj = {
     xlarge: 1680,
     large: 1280,
     medium: 980,
-    small: 736
+    small: 360 // smaller iphones
+}
+
+function delay(time) {
+   return new Promise(function(resolve) { 
+       setTimeout(resolve, time)
+   });
 }
 
 const containsRed = (png) => {
@@ -40,20 +46,23 @@ const takeScreenshot = async (url, page, widthName, width) => {
     const viewportHeight = 800; // You can set a default height, it won't affect the full-page screenshot
     await page.setViewport({ width: width, height: viewportHeight });
     await page.goto(url, { waitUntil: 'networkidle0' });
-    const screenshotName = `screenshot_${widthName}.png`;
+    await delay(400);
+    const screenshotName = `${widthName}.png`;
     const baseline =  `pics/baseline/${screenshotName}`;
     const baselineExists = fs.existsSync(baseline);
     const path = baselineExists ? `pics/new/${screenshotName}` : baseline;
     await page.screenshot({
-        path: paths,
+        path: path,
         fullPage: true
     })
     
     if (baselineExists) {
-        const different = await differentScreenshots(baseline, screenshotName, widthName);
+        const different = await differentScreenshots(baseline, path, widthName);
         if (different) {
             console.log(`The screenshot ${widthName} is different from the baseline`);
         }
+    } else {
+        console.log(`Baseline screenshot for ${widthName} created`);
     }
 }
 
