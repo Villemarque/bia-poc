@@ -652,7 +652,7 @@ ul.actions {
     position: relative;
   }
 
-  @include breakpoint(">medium") {
+  @media (min-width: at-least($medium)) {
     section {
       border-top: 0;
       padding-top: 0;
