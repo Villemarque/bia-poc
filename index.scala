@@ -177,7 +177,7 @@ object BIAWebsite {
                     div(
                       cls := "col-6 col-12-medium",
                       section(
-                        h3(cls := "icon fa-plane", "Créneau du mercredi"),
+                        h3(cls := "icon solid fa-plane", "Créneau du mercredi"),
                         p("De 17h30 à 19h30")
                       )
                     ),
