@@ -314,15 +314,16 @@ form {
   width: calc(100% - 40px);
 
 
-  @include breakpoint(">=medium") {
+
+  @media (min-width: at-least($medium)) {
     width: calc(100% - 100px);
   }
 
-  @include breakpoint(">=large") {
+  @media (min-width: at-least($large)) {
     width: calc(100% - 100px);
   }
 
-  @include breakpoint(">=xlarge") {
+  @media (min-width: at-least($xlarge)) {
     width: 70em;
   }
 
