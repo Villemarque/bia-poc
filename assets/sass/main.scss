@@ -311,23 +311,21 @@ form {
 .container {
   margin: 0 auto;
   max-width: 100%;
-  width: 68em;
+  width: calc(100% - 40px);
 
-  @include breakpoint("<=xlarge") {
+
+  @include breakpoint(">=medium") {
+    width: calc(100% - 100px);
+  }
+
+  @include breakpoint(">=large") {
+    width: calc(100% - 100px);
+  }
+
+  @include breakpoint(">=xlarge") {
     width: 70em;
   }
 
-  @include breakpoint("<=large") {
-    width: calc(100% - 100px);
-  }
-
-  @include breakpoint("<=medium") {
-    width: calc(100% - 100px);
-  }
-
-  @include breakpoint("<=small") {
-    width: calc(100% - 40px);
-  }
 }
 
 /* Row */
