@@ -85,6 +85,7 @@ object BIAWebsite {
                   "le tout premier brevet théorique sur le thème de l’aéronautique"
                 ),
                 li("un diplôme de l’éducation nationale"),
+                li("à partir de 13 ans à la date de l'examen puis sans limite d'âge"),
                 li(
                   "valide un niveau d’initiation à la culture scientifique et technique dans le domaine de l’aéronautique et du spatial ;"
                 ),
@@ -120,7 +121,7 @@ object BIAWebsite {
                 topic(
                   "Météorologie",
                   "images/meteo.jpg",
-                  "Etude des phénomènes météo ! L’atmosphère, les différents type de nuages, précipitation, mais aussi découverte des fronts, masses d’air, et incitation à la circulation générale atmosphérique."
+                  "Etude des phénomènes météo ! L’atmosphère, les différents type de nuages, précipitation, mais aussi découverte des fronts, masses d’air, et initiation à la circulation générale atmosphérique."
                 )
               ),
               div(
@@ -128,12 +129,12 @@ object BIAWebsite {
                 topic(
                   "Réglementation, sécurité des vols, navigation",
                   "images/nav.jpg",
-                  "Découverte des organisations qui gèrent la réglementation et la gestion de l’espace aérien. Description des facteurs contributifs aux incidents/accidents. Etude des différents moyen de navigation. Préparation d’une navigation en vol d’aéroclub."
+                  "Découverte des organisations qui gèrent la réglementation et la gestion de l’espace aérien. Description des facteurs contributifs aux incidents/accidents. Etude des différents moyens de navigation. Préparation d’une navigation en vol d’aéroclub."
                 ),
                 topic(
                   "Histoire de l’aéronautique et du spatial",
                   "images/histoire.jpeg",
-                  "Etude chronologique des faits marquants de l’histoire de l’aviation, du mythe d’Icare aux pionniers du XXème, à nos jours, en passant par les avancées militaires. La conquête spatiale est aussi au programme."
+                  "Etude chronologique des faits marquants de l’histoire de l’aviation, du mythe d’Icare à nos jours, en passant par les avancées militaires et les pionniers du XXème siècle. La conquête spatiale est aussi au programme."
                 )
               ),
               inscriptionButton
@@ -204,15 +205,20 @@ object BIAWebsite {
               cls := "container",
               p(
                 cls := "style3",
+                 "Créée en décembre 2020, notre assocation « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale juste. Et voici notre histoire :",
+                br,
+                br,
                 "En 2020, alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
                 br,
                 br,
-                "Répondant à cet appel, l’association « Aérien Ambassadeur Avenir », dite « triple A » est créée, se composant à la fois d’employés d’Air France, de Cadets Air France, et de Elèves Pilotes de Ligne (EPL) de l’ENAC. Cette opération est un grand succès puisque X élèves sont formés.",
+                "Répondant à cet appel, l’association « Aérien Ambassadeurs Avenir », dite « Triple A » est créée, se composant à la fois d’employés d’Air France, de Cadets Air France, et d'Elèves Pilotes de Ligne (EPL) de l’ENAC. Cette opération est un grand succès puisque plus de 900 élèves sont formés sur 2 ans.",
                 br,
                 br,
-                "L’opération est reconduite en 2021, et en 2022 l’association prend son indépendance pour s’ouvrir à tous, jeunes et moins jeunes volontaires d’obtenir un premier diplôme aéronautique reconnu par l’Etat.",
+                "En 2022, l’association prend son indépendance pour s’ouvrir à tous, jeunes et moins jeunes, leur permettant ainsi d’obtenir un premier diplôme aéronautique reconnu par l’Etat.",
                 br,
-                "Le profil des professeurs bénévoles s’est aussi diversifié comprenant des pilotes de multiples compagnies, mais aussi personnels navigants de cabine, ingénieurs, dispatcheurs, instructeurs planeur, et d’autres ! Mettant à profit leurs diverses expériences au service des élèves."
+                "Le profil des professeurs bénévoles s’est aussi diversifié comprenant des pilotes de multiples compagnies, mais aussi personnels navigants de cabine, ingénieurs, dispatcheurs, instructeurs planeur, et d’autres ! Tous nos enseignants bénévoles mettent ainsi à profit leurs diverses expériences au service des élèves pour leur transmettre notre passion.",
+                 br,
+                "En parallèle des cours de BIA, notre association se diversifie, notamment au travers de partenariats avec l'association Un morceau de ciel bleu, avec l'Ecole de l'air et de l'espace ou encore avec la FFA. Notre association, pleine d'ambition n'est encore qu'au tout début de son histoire !"
               )
             )
           ),
