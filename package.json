@@ -11,7 +11,7 @@
   "scripts": {
     "css": "sass assets/sass:assets/css",
     "css-w": "sass --watch assets/sass/main.scss assets/css/main.css",
-    "build": "sass assets/sass:assets/css",
+    "build": "sass assets/sass/main.scss assets/css/main.css",
     "format": "prettier --log-level warn --write ."
   }
 }
