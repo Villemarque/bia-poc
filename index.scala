@@ -258,7 +258,7 @@ object BIAWebsite {
                 div(
                   cls := "row",
                   div(
-                    cls := "col-3 col-6-medium col-12-small",
+                    cls := "col-6 col-12-small",
                     section(
                       cls := "no-top-line",
                       h3(cls := "icon solid fa-envelope", "Email"),
