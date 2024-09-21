@@ -286,7 +286,7 @@ object BIAWebsite {
               div(
                 id := "copyright",
                 ul(
-                  li("© Solal LORCY."),
+                  li("© Solal LORCY, CCA 3.0"),
                   li("Design: ", a(href := "http://html5up.net")("HTML5 UP")),
                   li(
                     a(href := "https://github.com/Villemarque/bia-poc")(
