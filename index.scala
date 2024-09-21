@@ -260,43 +260,25 @@ object BIAWebsite {
                   div(
                     cls := "col-3 col-6-medium col-12-small",
                     section(
-                      h3(cls := "icon solid fa-home", "Mailing Address"),
-                      p(
-                        "Untitled Corp",
-                        br,
-                        "1234 Somewhere Rd",
-                        br,
-                        "Nashville, TN 00000"
-                      )
-                    )
-                  ),
-                  div(
-                    cls := "col-3 col-6-medium col-12-small",
-                    section(
-                      h3(cls := "icon solid fa-comment", "Social"),
-                      p(
-                        a(href := "#")("@untitled-corp"),
-                        br,
-                        a(href := "#")("linkedin.com/untitled"),
-                        br,
-                        a(href := "#")("facebook.com/untitled")
-                      )
-                    )
-                  ),
-                  div(
-                    cls := "col-3 col-6-medium col-12-small",
-                    section(
                       cls := "no-top-line",
                       h3(cls := "icon solid fa-envelope", "Email"),
                       p(a(href := s"mailto:$contactMail")(contactMail))
                     )
                   ),
                   div(
-                    cls := "col-3 col-6-medium col-12-small",
+                    cls := "col-6 col-12-small",
                     section(
-                      cls := "no-top-line",
-                      h3(cls := "icon solid fa-phone", "Phone"),
-                      p("(000) 555-0000")
+                      h3(cls := "icon solid fa-comment", "Réseaux sociaux"),
+                      p("Instagram ", 
+                        a(
+                          href := "https://www.instagram.com/aerien_ambassadeurs_avenir"
+                        )("@aerien_ambassadeurs_avenir"),
+                        br,
+                        "Linkedin ",
+                        a(
+                          href := "https://www.linkedin.com/company/aerien-ambassadeurs-avenir"
+                        )("aerien-ambassadeurs-avenir")
+                      )
                     )
                   )
                 )
