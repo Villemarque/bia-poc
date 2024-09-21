@@ -274,7 +274,7 @@ object BIAWebsite {
                           href := "https://www.instagram.com/aerien_ambassadeurs_avenir"
                         )("@aerien_ambassadeurs_avenir"),
                         br,
-                        "Linkedin ",
+                        "LinkedIn ",
                         a(
                           href := "https://www.linkedin.com/company/aerien-ambassadeurs-avenir"
                         )("aerien-ambassadeurs-avenir")
