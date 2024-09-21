@@ -667,20 +667,6 @@ ul.actions {
     }
   }
 
-  /* Footer */
-
-  #footer {
-    padding-bottom: 4em;
-
-    header {
-      &.style1 {
-        padding-bottom: 4em;
-        margin-bottom: 4em;
-        border-bottom: solid 1px rgba(255, 255, 255, 0.05);
-      }
-    }
-  }
-
   /* Copyright */
 
   #copyright {
@@ -755,20 +741,6 @@ ul.actions {
     }
   }
 
-  /* Footer */
-
-  #footer {
-    .feature-list {
-      border-top: solid 1px rgba(255, 255, 255, 0.05);
-
-      @media (min-width: at-least($small)) {
-        > .row > :nth-child(2) > section {
-          border-top: 0;
-          padding-top: 0;
-        }
-      }
-    }
-  }
 
   /* Nav */
 
@@ -1020,25 +992,6 @@ ul.actions {
       &.style1 {
         padding-bottom: 2.5em;
       }
-    }
-  }
-
-  /* Footer */
-
-  #footer {
-    padding-bottom: 0;
-
-    header {
-      &.style1 {
-        padding-bottom: 0;
-        margin-bottom: 2em;
-        border-bottom: 0;
-      }
-    }
-
-    .feature-list {
-      border-top: 0;
-      padding-top: 0;
     }
   }
 

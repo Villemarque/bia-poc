@@ -63,3 +63,37 @@
     }
   }
 }
+
+@media (max-width: at-most($medium)) {
+  #footer {
+    .feature-list {
+      border-top: solid 1px rgba(255, 255, 255, 0.05);
+
+      @media (min-width: at-least($small)) {
+        > .row > :nth-child(2) > section {
+          border-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: at-most($small)) {
+  #footer {
+    padding-bottom: 0;
+
+    header {
+      &.style1 {
+        padding-bottom: 0;
+        margin-bottom: 2em;
+        border-bottom: 0;
+      }
+    }
+
+    .feature-list {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+}
