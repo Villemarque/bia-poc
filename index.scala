@@ -7,6 +7,8 @@ import scalatags.Text.tags2.{title, style, section}
 val inscriptionLink =
   "https://docs.google.com/forms/d/e/1FAIpQLSdFUCkiHjYpZ714cT6zaPTPSlPBZNL_CmDl9eFY2xCnag6KLQ/viewform"
 
+val contactMail = "contact@asso-triple-a.org"
+
 object BIAWebsite {
   def main(_args: Array[String]): Unit = {
     val pageHtml = "<!DOCTYPE html>" + html(
@@ -85,7 +87,9 @@ object BIAWebsite {
                   "le tout premier brevet théorique sur le thème de l’aéronautique"
                 ),
                 li("un diplôme de l’éducation nationale"),
-                li("à partir de 13 ans à la date de l'examen puis sans limite d'âge"),
+                li(
+                  "à partir de 13 ans à la date de l'examen puis sans limite d'âge"
+                ),
                 li(
                   "valide un niveau d’initiation à la culture scientifique et technique dans le domaine de l’aéronautique et du spatial ;"
                 ),
@@ -205,10 +209,10 @@ object BIAWebsite {
               cls := "container",
               p(
                 cls := "style3",
-                 "Créée en décembre 2020, notre assocation « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale juste. Et voici notre histoire :",
+                "Créée en décembre 2020, notre assocation « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale juste. Voici notre histoire :",
                 br,
                 br,
-                "En 2020, alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
+                "Alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
                 br,
                 br,
                 "Répondant à cet appel, l’association « Aérien Ambassadeurs Avenir », dite « Triple A » est créée, se composant à la fois d’employés d’Air France, de Cadets Air France, et d'Elèves Pilotes de Ligne (EPL) de l’ENAC. Cette opération est un grand succès puisque plus de 900 élèves sont formés sur 2 ans.",
@@ -217,7 +221,7 @@ object BIAWebsite {
                 "En 2022, l’association prend son indépendance pour s’ouvrir à tous, jeunes et moins jeunes, leur permettant ainsi d’obtenir un premier diplôme aéronautique reconnu par l’Etat.",
                 br,
                 "Le profil des professeurs bénévoles s’est aussi diversifié comprenant des pilotes de multiples compagnies, mais aussi personnels navigants de cabine, ingénieurs, dispatcheurs, instructeurs planeur, et d’autres ! Tous nos enseignants bénévoles mettent ainsi à profit leurs diverses expériences au service des élèves pour leur transmettre notre passion.",
-                 br,
+                br,
                 "En parallèle des cours de BIA, notre association se diversifie, notamment au travers de partenariats avec l'association Un morceau de ciel bleu, avec l'Ecole de l'air et de l'espace ou encore avec la FFA. Notre association, pleine d'ambition n'est encore qu'au tout début de son histoire !"
               )
             )
@@ -244,7 +248,7 @@ object BIAWebsite {
                   " pour alléger la préparation des cours.",
                   br,
                   br,
-                  a(href := "#")(
+                  a(href := s"mailto:$contactMail")(
                     "N’hésitez pas à nous contacter pour de plus amples informations !"
                   )
                 )
@@ -284,7 +288,7 @@ object BIAWebsite {
                     section(
                       cls := "no-top-line",
                       h3(cls := "icon solid fa-envelope", "Email"),
-                      p(a(href := "#")("info@untitled.tld"))
+                      p(a(href := s"mailto:$contactMail")(contactMail))
                     )
                   ),
                   div(
