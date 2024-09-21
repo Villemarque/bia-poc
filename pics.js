@@ -53,7 +53,7 @@ const differentScreenshots = (baseline, screenshot, name) => {
 const takeScreenshot = async (url, page, widthName, width, forceBaseline) => {
   // fixed viewport height instead of taking full page picture because `pixelmatch`
   // need images to have the same dimensions, and modifying css often has an impact of length
-  const viewportHeight = 7000; 
+  const viewportHeight = 7000;
   await page.setViewport({ width: width, height: viewportHeight });
   await page.goto(url, { waitUntil: "networkidle0" });
   const screenshotName = `${widthName}.png`;
@@ -69,12 +69,12 @@ const takeScreenshot = async (url, page, widthName, width, forceBaseline) => {
     const different = await differentScreenshots(baseline, path, widthName);
     if (different) {
       console.log(`The screenshot ${widthName} is different from the baseline`);
-      return true
+      return true;
     }
   } else {
     console.log(`Baseline screenshot for ${widthName} created`);
   }
-  return false
+  return false;
 };
 
 const makeDirs = () => {
@@ -112,6 +112,6 @@ const makeDirs = () => {
   }
   await browser.close();
   if (!changed) {
-    console.log("No visual change compared to baseline")
+    console.log("No visual change compared to baseline");
   }
 })();

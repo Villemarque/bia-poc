@@ -256,3 +256,13 @@ blockquote,
 form {
   margin-bottom: 2em;
 }
+
+@media (max-width: at-most($xlarge)) {
+  /* Basic */
+  body,
+  input,
+  textarea,
+  select {
+    font-size: 12pt;
+  }
+}
