@@ -3,6 +3,12 @@
   color: #eee;
   color: rgba(255, 255, 255, 0.5);
   padding-bottom: 6em;
+  @media (max-width: at-most($large)) {
+    padding-bottom: 4em;
+  }
+  @media (max-width: at-most($small)) {
+    padding-bottom: 0;
+  }
 
   h1,
   h2,
@@ -31,6 +37,10 @@
       padding-bottom: 6em;
       margin-bottom: 6em;
       border-bottom: solid 1px rgba(255, 255, 255, 0.05);
+      @media (max-width: at-most($large)) {
+        padding-bottom: 4em;
+        margin-bottom: 4em;
+      }
 
       h2 {
         color: #fff;
@@ -46,20 +56,6 @@
 
     section {
       border-top-color: rgba(255, 255, 255, 0.05);
-    }
-  }
-}
-
-@media (max-width: at-most($large)) {
-  #footer {
-    padding-bottom: 4em;
-
-    header {
-      &.style1 {
-        padding-bottom: 4em;
-        margin-bottom: 4em;
-        border-bottom: solid 1px rgba(255, 255, 255, 0.05);
-      }
     }
   }
 }
@@ -81,7 +77,6 @@
 
 @media (max-width: at-most($small)) {
   #footer {
-    padding-bottom: 0;
 
     header {
       &.style1 {
