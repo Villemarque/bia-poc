@@ -13,7 +13,7 @@ object BIAWebsite {
   def main(_args: Array[String]): Unit = {
     val pageHtml = "<!DOCTYPE html>" + html(
       head(
-        title("BIA par Triple A"),
+        title("BIA par Aérien Ambassadeurs Avenir (Triple A)"),
         meta(charset := "utf-8"),
         meta(
           name := "viewport",
