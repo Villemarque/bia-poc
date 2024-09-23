@@ -214,7 +214,7 @@ object BIAWebsite {
               cls := "container",
               p(
                 cls := "style3",
-                "Créée en décembre 2020, notre assocation « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale juste. Voici notre histoire :",
+                "Créée en décembre 2020, notre assocation « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale. Voici notre histoire :",
                 br,
                 br,
                 "Alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
