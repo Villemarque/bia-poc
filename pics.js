@@ -111,7 +111,7 @@ const makeDirs = () => {
     changed |= await takeScreenshot(url, page, widthName, width, forceBaseline);
   }
   await browser.close();
-  if (!changed) {
+  if (!changed && !forceBaseline) {
     console.log("No visual change compared to baseline");
   }
 })();
