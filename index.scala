@@ -14,7 +14,11 @@ object BIAWebsite {
     val pageHtml = "<!DOCTYPE html>" + html(
       head(
         title("BIA par Aérien Ambassadeurs Avenir (Triple A)"),
-        link(rel := "icon", tpe := "image/x-icon",  href := "/images/favicon.ico"),
+        link(
+          rel := "icon",
+          tpe := "image/x-icon",
+          href := "/images/favicon.ico"
+        ),
         meta(charset := "utf-8"),
         meta(
           name := "viewport",
@@ -223,7 +227,19 @@ object BIAWebsite {
                 br,
                 "Le profil des professeurs bénévoles s’est aussi diversifié comprenant des pilotes de multiples compagnies, mais aussi personnels navigants de cabine, ingénieurs, dispatcheurs, instructeurs planeur, et d’autres ! Tous nos enseignants bénévoles mettent ainsi à profit leurs diverses expériences au service des élèves pour leur transmettre notre passion.",
                 br,
-                "En parallèle des cours de BIA, notre association se diversifie, notamment au travers de partenariats avec l'association Un morceau de ciel bleu, avec l'Ecole de l'air et de l'espace ou encore avec la FFA. Notre association, pleine d'ambition n'est encore qu'au tout début de son histoire !"
+                "En parallèle des cours de BIA, notre association se diversifie, notamment au travers de partenariats avec l'association ",
+                a(
+                  href := "https://unmorceaudecielbleu.wixsite.com/unmorceaudecielbleu"
+                )("Un morceau de ciel bleu"),
+                ", avec ",
+                a(href := "https://www.ecole-air-espace.fr")(
+                  "l'Ecole de l'air et de l'espace"
+                ),
+                " ou encore avec la ",
+                a(
+                  href := "https://www.ffa-aero.fr/FR/Federation_Aeronautique.awp"
+                )("FFA"),
+                ". Notre association, pleine d'ambition n'est encore qu'au tout début de son histoire !"
               )
             )
           ),
@@ -270,7 +286,8 @@ object BIAWebsite {
                     cls := "col-6 col-12-small",
                     section(
                       h3(cls := "icon solid fa-comment", "Réseaux sociaux"),
-                      p("Instagram ", 
+                      p(
+                        "Instagram ",
                         a(
                           href := "https://www.instagram.com/aerien_ambassadeurs_avenir"
                         )("@aerien_ambassadeurs_avenir"),
