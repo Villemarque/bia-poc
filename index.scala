@@ -99,7 +99,7 @@ object BIAWebsite {
                   "valide un niveau d’initiation à la culture scientifique et technique dans le domaine de l’aéronautique et du spatial ;"
                 ),
                 li(
-                  "et est reconnu par les différentes fédérations aéronautiques."
+                  "est reconnu par les ",a(href := "https://cnfas.fr")("différentes fédérations aéronautiques"),"."
                 )
               ),
               p(
