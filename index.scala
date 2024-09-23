@@ -93,7 +93,7 @@ object BIAWebsite {
                 ),
                 li("un diplôme de l’éducation nationale"),
                 li(
-                  "à partir de 13 ans à la date de l'examen puis sans limite d'âge"
+                  "à partir de 13 ans à la date de l'examen (début juin) et sans limite d'âge"
                 ),
                 li(
                   "valide un niveau d’initiation à la culture scientifique et technique dans le domaine de l’aéronautique et du spatial ;"
