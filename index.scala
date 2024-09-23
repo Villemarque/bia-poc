@@ -110,7 +110,7 @@ object BIAWebsite {
                 br,
                 "Une ",
                 strong("épreuve facultative d’anglais aéronautique"),
-                " dont seuls les points supérieurs à 10 sont comptés. ",
+                " dont seuls les points supérieurs à 10 sont comptés est proposée.",
                 br,
                 "La note moyenne de chaque candidat est calculée en divisant par cinq la somme des points obtenus."
               ),
