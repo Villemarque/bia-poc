@@ -14,6 +14,7 @@ object BIAWebsite {
     val pageHtml = "<!DOCTYPE html>" + html(
       head(
         title("BIA par Aérien Ambassadeurs Avenir (Triple A)"),
+        link(rel := "icon", tpe := "image/x-icon",  href := "/images/favicon.ico"),
         meta(charset := "utf-8"),
         meta(
           name := "viewport",
