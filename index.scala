@@ -221,11 +221,11 @@ object BIAWebsite {
                 "Créée en décembre 2020, ",
                 a(
                   href := "https://www.journal-officiel.gouv.fr/pages/associations-detail-annonce/?q.id=id:202100021965"
-                )("notre assocation loi 1901"),
+                )("notre association loi 1901"),
                 " « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale. Voici notre histoire :",
                 br,
                 br,
-                "Alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
+                "En 2020, alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
                 br,
                 br,
                 "Répondant à cet appel, l’association « Aérien Ambassadeurs Avenir », dite « Triple A » est créée, se composant à la fois d’employés d’Air France, de Cadets Air France, et d'Elèves Pilotes de Ligne (EPL) de l’ENAC. Cette opération est un grand succès puisque plus de 900 élèves sont formés sur 2 ans.",
