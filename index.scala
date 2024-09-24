@@ -99,7 +99,11 @@ object BIAWebsite {
                   "valide un niveau d’initiation à la culture scientifique et technique dans le domaine de l’aéronautique et du spatial ;"
                 ),
                 li(
-                  "est reconnu par les ",a(href := "https://cnfas.fr")("différentes fédérations aéronautiques"),"."
+                  "est reconnu par les ",
+                  a(href := "https://cnfas.fr")(
+                    "différentes fédérations aéronautiques"
+                  ),
+                  "."
                 )
               ),
               p(
@@ -214,7 +218,11 @@ object BIAWebsite {
               cls := "container",
               p(
                 cls := "style3",
-                "Créée en décembre 2020, notre assocation « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale. Voici notre histoire :",
+                "Créée en décembre 2020, ",
+                a(
+                  href := "https://www.journal-officiel.gouv.fr/pages/associations-detail-annonce/?q.id=id:202100021965"
+                )("notre assocation loi 1901"),
+                " « Aérien Ambassadeurs Avenir » a pour objectifs de partager notre passion pour l'aéronautique avec la jeunesse, les passionnés de demain, de susciter des vocations et de développer une conscience environnementale. Voici notre histoire :",
                 br,
                 br,
                 "Alors que la France se confine, la compagnie Air France souhaite proposer aux enfants de ses salariés des cours en ligne pour se former au Brevet d’Initiation Aéronautique.",
