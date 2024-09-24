@@ -110,7 +110,7 @@ object BIAWebsite {
                 cls := "style1",
                 "L’examen est un QCM de ",
                 strong("2h30"),
-                ", prévue entre fin mai et début juin. Il y a 20 questions par matière, soit 100 QCM au total, environ 30 minutes par chapitre. ",
+                ", prévu entre fin mai et début juin. Il y a 20 questions par matière, soit 100 QCM au total, environ 30 minutes par chapitre. ",
                 br,
                 "Une ",
                 strong("épreuve facultative d’anglais aéronautique"),
@@ -124,7 +124,7 @@ object BIAWebsite {
                 topic(
                   "Connaissance des aéronefs",
                   "images/aeronefs.png",
-                  "Découverte des différents aéronefs qui existent ! Etude des parties d’un avion, explication des différents types de moteurs, ainsi que des différents instruments que l’on retrouve dans un cockpit."
+                  "Découverte des différents aéronefs ! Etude des parties d’un avion, explication des différents types de moteurs, ainsi que des différents instruments que l’on retrouve dans un cockpit."
                 ),
                 topic(
                   "Aérodynamique et principes du vol",
@@ -134,7 +134,7 @@ object BIAWebsite {
                 topic(
                   "Météorologie",
                   "images/meteo.jpg",
-                  "Etude des phénomènes météo ! L’atmosphère, les différents type de nuages, précipitation, mais aussi découverte des fronts, masses d’air, et initiation à la circulation générale atmosphérique."
+                  "Etude des phénomènes météo ! L’atmosphère, les différents types de nuages, précipitations, mais aussi découverte des fronts, masses d’air, et initiation à la circulation générale atmosphérique."
                 )
               ),
               div(
