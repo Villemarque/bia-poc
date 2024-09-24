@@ -247,7 +247,7 @@ object BIAWebsite {
                 a(
                   href := "https://www.ffa-aero.fr/FR/Federation_Aeronautique.awp"
                 )("FFA"),
-                ". Notre association, pleine d'ambition n'est encore qu'au tout début de son histoire !"
+                ". Notre association, pleine d'ambition, n'est encore qu'au tout début de son histoire !"
               )
             )
           ),
@@ -263,7 +263,7 @@ object BIAWebsite {
                 cls := "style1",
                 h2("Envie de devenir professeur bénévole ?"),
                 p(
-                  "Quelque soit votre domaine d’activité, si vous souhaitez partager votre passion pour l’aéronautique, vous êtes le bienvenu !",
+                  "Quel que soit votre domaine d’activité, si vous souhaitez partager votre passion pour l’aéronautique, vous êtes le bienvenu !",
                   br,
                   br,
                   "Nous proposons un ",
