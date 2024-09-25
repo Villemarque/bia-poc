@@ -63,13 +63,8 @@ object BIAWebsite {
           section(
             id := "header",
             cls := "wrapper",
-            div(
-              id := "logo",
-              h1(
-                a(href := "index.html")(
-                  "cours du BIA en visio, gratuit, pour tous"
-                )
-              ),
+            div(id := "logo")(
+              h1("cours du BIA en visio, gratuit, pour tous"),
               p("Par l’association Aérien Ambassadeurs Avenir")
             )
           ),
