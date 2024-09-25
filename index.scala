@@ -179,7 +179,7 @@ object BIAWebsite {
                     ", suivant les ",
                     strong("périodes scolaires"),
                     " de la ",
-                    strong("zone A"),
+                    strong("zone C"),
                     " (Paris). Durant les vacances scolaires ",
                     "des cours de révisions peuvent être proposés."
                   )
