@@ -109,7 +109,7 @@ object BIAWebsite {
                 br,
                 "Une ",
                 strong("épreuve facultative d’anglais aéronautique"),
-                " dont seuls les points supérieurs à 10 sont comptés est proposée.",
+                ", dont seuls les points supérieurs à 10 sont comptés, est proposée.",
                 br,
                 "La note moyenne de chaque candidat est calculée en divisant par cinq la somme des points obtenus."
               ),
@@ -166,7 +166,7 @@ object BIAWebsite {
                   cls := "style1",
                   p(
                     "Les cours sont donnés en ",
-                    strong("visioconférences"),
+                    strong("visioconférence"),
                     " à partir du mois ",
                     strong("d’octobre"),
                     " jusqu’à ",
@@ -228,7 +228,7 @@ object BIAWebsite {
                 br,
                 "En 2022, l’association prend son indépendance pour s’ouvrir à tous, jeunes et moins jeunes, leur permettant ainsi d’obtenir un premier diplôme aéronautique reconnu par l’Etat.",
                 br,
-                "Le profil des professeurs bénévoles s’est aussi diversifié comprenant des pilotes de multiples compagnies, mais aussi personnels navigants de cabine, ingénieurs, dispatcheurs, instructeurs planeur, et d’autres ! Tous nos enseignants bénévoles mettent ainsi à profit leurs diverses expériences au service des élèves pour leur transmettre notre passion.",
+                "Le profil des professeurs bénévoles s’est aussi diversifié comprenant des pilotes de multiples compagnies, mais aussi personnels navigants de cabine, ingénieurs, dispatcheurs, instructeurs planeur, et d’autres ! Tous nos enseignants bénévoles mettent ainsi à profit leurs diverses expériences au service des élèves pour leur transmettre leur passion.",
                 br,
                 "En parallèle des cours de BIA, notre association se diversifie, notamment au travers de partenariats avec l'association ",
                 a(
