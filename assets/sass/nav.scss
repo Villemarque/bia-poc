@@ -7,12 +7,18 @@
   text-align: center;
   z-index: 1050;
   background: linear-gradient(to top, #242736, #244c7b);
+  //padding: .5rem 1rem;
 
   .nav-logo {
     position: fixed;
-    height: 3.2em;
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+    //height: 3.2em;
     left: 0;
-    color: #fff;
+    padding: 0.5em 1em;
   }
   @media (max-width: at-most($small)) {
     .nav-not-essential {
