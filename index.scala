@@ -34,10 +34,12 @@ object BIAWebsite {
           // Navigation
           div(
             id := "nav",
-            img(
-              src := "images/logo-white.svg",
-              alt := "logo",
-              cls := "nav-logo"
+            a(href := "#")(
+              img(
+                src := "images/logo-white.svg",
+                alt := "logo",
+                cls := "nav-logo"
+              )
             ),
             ul(cls := "nav-list")(
               li(
