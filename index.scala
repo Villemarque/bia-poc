@@ -34,28 +34,31 @@ object BIAWebsite {
           // Navigation
           div(
             id := "nav",
-            img(
-              src := "images/logo-white.svg",
-              alt := "logo",
-              cls := "nav-logo"
+            a(href := "#")(
+              img(
+                src := "images/logo-white.svg",
+                alt := "logo",
+                cls := "nav-logo"
+              )
             ),
-            ul(
-              li(cls := "nav-not-essential", a(href := "#")("Accueil")),
-              li(a(href := "#highlights")("Le BIA")),
-              li(a(href := "#features")("Les cours")),
+            ul(cls := "nav-list")(
               li(
-                cls := "nav-not-essential",
+                cls := "nav-not-essential nav-item",
+                a(href := "#")("Accueil")
+              ),
+              li(cls := "nav-item")(a(href := "#highlights")("Le BIA")),
+              li(cls := "nav-item")(a(href := "#features")("Les cours")),
+              li(
+                cls := "nav-not-essential nav-item",
                 a(href := "#intro")("Nous connaitre")
               ),
               li(
-                strong(
-                  a(href := inscriptionLink)("S’incrire")
-                )
-              ),
-              li(
-                cls := "nav-not-essential",
+                cls := "nav-not-essential nav-item",
                 a(href := "#footer")("Devenir volontaire")
               )
+            ),
+            a(cls := "nav-inscription-link", href := inscriptionLink)(
+              "S’incrire"
             )
           ),
 
