@@ -3,8 +3,7 @@
 ## Install
 
 `pnpm install`
-to generate CSS
-`pnpm sass assets/sass/main.scss assets/css/main.css`
+to generate CSS run `pnpm run build`
 
 to generate the HTML, you need a working JVM, with `scala-cli` installed.
 Then `scala-cli index.scala > index.html`
