@@ -1,4 +1,5 @@
 import puppeteer from "puppeteer";
+import readline from "readline";
 import { program } from "commander";
 import { PNG } from "pngjs";
 import pixelmatch from "pixelmatch";
@@ -77,6 +78,21 @@ const takeScreenshot = async (url, page, widthName, width, forceBaseline) => {
   return false;
 };
 
+// https://stackoverflow.com/a/50890409/20374403
+function askQuestion(query) {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  return new Promise((resolve) =>
+    rl.question(query, (ans) => {
+      rl.close();
+      resolve(ans);
+    }),
+  );
+}
+
 const makeDirs = () => {
   fs.mkdir("pics/new", { recursive: true }, () => {});
   fs.mkdir("pics/diff", { recursive: true }, () => {});
@@ -92,6 +108,16 @@ const makeDirs = () => {
 
   const options = program.opts();
   const forceBaseline = options.newBaseline;
+  // ask to confirm via input yes
+  if (forceBaseline) {
+    const answer = await askQuestion(
+      "Confirm you want to override baseline screenshots? (yes/no) ",
+    );
+    if (answer !== "yes" && answer !== "y") {
+      console.log("Exiting");
+      process.exit(0);
+    }
+  }
   // create new and diff dirs
   makeDirs();
   if (forceBaseline) {

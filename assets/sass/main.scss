@@ -684,16 +684,6 @@ ul.actions {
     }
   }
 
-  /* Nav */
-
-  #nav {
-    > ul {
-      > li {
-        padding: 0 1.2em 0 1.2em;
-      }
-    }
-  }
-
   /* Form */
 
   form {
@@ -741,45 +731,10 @@ ul.actions {
     }
   }
 
-  /* Nav */
-
   #page-wrapper {
     @include vendor("backface-visibility", "hidden");
     @include vendor("transition", "transform #{_duration(navPanel)} ease");
     padding-bottom: 1px;
-  }
-
-  #titleBar {
-    @include vendor("backface-visibility", "hidden");
-    @include vendor("transition", "transform #{_duration(navPanel)} ease");
-    display: block;
-    height: 44px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: _misc(z-index-base) + 1;
-    background: none;
-
-    .title {
-      display: none;
-    }
-  }
-
-  #navPanel {
-    @include vendor("backface-visibility", "hidden");
-    @include vendor("transform", "translateX(#{_size(navPanel) * -1})");
-    @include vendor("transition", ("transform #{_duration(navPanel)} ease"));
-    display: block;
-    height: 100%;
-    left: 0;
-    overflow-y: auto;
-    position: fixed;
-    top: 0;
-    width: _size(navPanel);
-    z-index: _misc(z-index-base) + 2;
-    background: #242730;
-    box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -838,14 +793,6 @@ ul.actions {
         display: block;
         margin: 0;
       }
-    }
-  }
-
-  /* Nav */
-
-  #nav {
-    .nav-not-essential {
-      display: none;
     }
   }
 

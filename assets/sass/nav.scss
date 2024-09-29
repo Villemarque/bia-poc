@@ -14,6 +14,11 @@
     left: 0;
     color: #fff;
   }
+  @media (max-width: at-most($small)) {
+    .nav-not-essential {
+      display: none;
+    }
+  }
 
   > ul {
     display: inline-block;
@@ -24,6 +29,9 @@
       display: inline-block;
       text-align: center;
       padding: 0 1.5em 0 1.5em;
+      @media (max-width: at-most($medium)) {
+        padding: 0 1.2em 0 1.2em;
+      }
 
       // for dropdown
       > ul {
