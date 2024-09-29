@@ -6,7 +6,9 @@
   height: 3.5em; // why does it need to be set, how to shrink to fit?
   text-align: center;
   z-index: 1050;
-  background: linear-gradient(to top, #242736, #244c7b);
+  background: #000a33;
+  min-height: 4em;
+  align-items: center;
   //padding: .5rem 1rem;
 
   .nav-logo {
@@ -16,7 +18,6 @@
     height: inherit;
     width: inherit;
     object-fit: contain;
-    //height: 3.2em;
     left: 0;
     padding: 0.5em 1em;
   }
@@ -29,7 +30,6 @@
   > ul {
     display: inline-block;
     border-radius: 0.35em;
-    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
 
     > li {
       display: inline-block;
@@ -37,11 +37,6 @@
       padding: 0 1.5em 0 1.5em;
       @media (max-width: at-most($medium)) {
         padding: 0 1.2em 0 1.2em;
-      }
-
-      // for dropdown
-      > ul {
-        display: none;
       }
 
       > a,
