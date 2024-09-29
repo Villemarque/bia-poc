@@ -13,9 +13,8 @@
   z-index: 1050;
   background: var(--nav-dark-blue);
   min-height: 3em;
-  // explicit padding
+  // explicit padding, slightly larger to the right than left
   padding: 0.5em 1.5em 0.5em 1em;
-  //padding: .5rem 1rem;
 
   .nav-logo {
     display: block;
@@ -24,7 +23,6 @@
     height: 3em;
     object-fit: contain;
     left: 0;
-    //padding: 0.5em 1em;
   }
   @media (max-width: at-most($small)) {
     .nav-not-essential {
