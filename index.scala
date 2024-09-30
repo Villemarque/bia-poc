@@ -194,7 +194,7 @@ object BIAWebsite {
                     "Nos professeurs, directement issus du secteur aérien, peuvent aider pour l'orientation professionnelle"
                   ),
                   li(
-                    "Notre site d'annales à disposition, pour bien se préparer à l'examen"
+                    "Notre site d'annales mis à disposition, pour bien se préparer à l'examen"
                   ),
                   li(
                     "Notre partenariat avec la ",
