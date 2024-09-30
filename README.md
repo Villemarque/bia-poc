@@ -8,6 +8,8 @@ to generate CSS run `pnpm run build`
 to generate the HTML, you need a working JVM, with `scala-cli` installed.
 Then `scala-cli index.scala > index.html`
 
+To format, `pnpm run format` and `scala-cli fmt`.
+
 ## Credits:
 
 - Template: https://html5up.net/escape-velocity
