@@ -9,6 +9,10 @@ val inscriptionLink =
 
 val contactMail = "contact@asso-triple-a.org"
 
+val aHrefFFA = a(
+                  href := "https://www.ffa-aero.fr/FR/Federation_Aeronautique.awp"
+                )("Fédération Française Aéronautique")
+
 object BIAWebsite {
   def main(_args: Array[String]): Unit = {
     val pageHtml = "<!DOCTYPE html>" + html(
@@ -94,7 +98,7 @@ object BIAWebsite {
                   "à partir de 13 ans à la date de l'examen (début juin) et sans limite d'âge"
                 ),
                 li(
-                  "valide un niveau d’initiation à la culture scientifique et technique dans le domaine de l’aéronautique et du spatial ;"
+                  "valide un niveau d’initiation à la culture scientifique et technique dans le domaine de l’aéronautique et du spatial"
                 ),
                 li(
                   "est reconnu par les ",
@@ -182,6 +186,13 @@ object BIAWebsite {
                     "des cours de révisions peuvent être proposés."
                   )
                 ),
+                ul(
+                  li("Le format en visioconférence permet de suivre les cours dans le monde entier"),
+                  li("Nos professeurs, directement issus du secteur aérien, peuvent aider pour l'orientation professionnelle"),
+                  li("Notre site d'annales à disposition, pour bien se préparer à l'examen"),
+                  li("Notre partenariat avec la ",aHrefFFA," afin de potentiellement bénéficier d'une subvention pour un vol d'initiation"),
+                  li("Nos cours adaptés à tous les profils : accessible aux plus jeunes, et possédant des encarts \"Pour aller plus loin\" pour les plus avertis"),
+              ),
                 div(
                   cls := "feature-list",
                   div(
@@ -242,9 +253,7 @@ object BIAWebsite {
                   "l'Ecole de l'air et de l'espace"
                 ),
                 " ou encore avec la ",
-                a(
-                  href := "https://www.ffa-aero.fr/FR/Federation_Aeronautique.awp"
-                )("FFA"),
+                aHrefFFA,
                 ". Notre association, pleine d'ambition, n'est encore qu'au tout début de son histoire !"
               )
             )
