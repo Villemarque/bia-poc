@@ -10,8 +10,8 @@ val inscriptionLink =
 val contactMail = "contact@asso-triple-a.org"
 
 val aHrefFFA = a(
-                  href := "https://www.ffa-aero.fr/FR/Federation_Aeronautique.awp"
-                )("Fédération Française Aéronautique")
+  href := "https://www.ffa-aero.fr/FR/Federation_Aeronautique.awp"
+)("Fédération Française Aéronautique")
 
 object BIAWebsite {
   def main(_args: Array[String]): Unit = {
@@ -187,12 +187,27 @@ object BIAWebsite {
                   )
                 ),
                 ul(
-                  li("Le format en visioconférence permet de suivre les cours dans le monde entier"),
-                  li("Nos professeurs, directement issus du secteur aérien, peuvent aider pour l'orientation professionnelle"),
-                  li("Notre site d'annales à disposition, pour bien se préparer à l'examen"),
-                  li("Notre partenariat avec la ",aHrefFFA," afin de potentiellement bénéficier d'une subvention pour un vol d'initiation"),
-                  li("Nos cours adaptés à tous les profils : accessible aux plus jeunes, et possédant des encarts \"Pour aller plus loin\" pour les plus avertis"),
-              ),
+                  li(
+                    "Le format en visioconférence permet de suivre les cours dans le monde entier"
+                  ),
+                  li(
+                    "Nos professeurs, directement issus du secteur aérien, peuvent aider pour l'orientation professionnelle"
+                  ),
+                  li(
+                    "Notre site d'annales à disposition, pour bien se préparer à l'examen"
+                  ),
+                  li(
+                    "Notre partenariat avec la ",
+                    aHrefFFA,
+                    " afin de potentiellement bénéficier d'une subvention pour un vol d'initiation"
+                  ),
+                  li(
+                    "Nos cours adaptés à tous les profils : accessible aux plus jeunes, et possédant des encarts \"Pour aller plus loin\" pour les plus avertis"
+                  ),
+                  li(
+                    "Nous avons eu à coeur de distiller du contenu environnemental dans nos cours : nous évoquons en toute transparence l'impact environnemental de l'aérien et du spatial tout en soulignant les solutions déjà mises en place ainsi que les perspectives futures"
+                  )
+                ),
                 div(
                   cls := "feature-list",
                   div(
