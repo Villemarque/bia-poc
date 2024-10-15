@@ -71,7 +71,7 @@ object BIAWebsite {
             id := "header",
             cls := "wrapper",
             div(id := "logo")(
-              h1("cours du BIA en visio, gratuit, pour tous"),
+              h1("cours du BIA à distance par visioconférence, gratuit, pour tous"),
               p("Par l’association Aérien Ambassadeurs Avenir")
             )
           ),
