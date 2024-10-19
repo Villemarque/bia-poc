@@ -22,11 +22,6 @@
     object-fit: contain;
     left: 0;
   }
-  @media (max-width: at-most($small)) {
-    .nav-not-essential {
-      display: none;
-    }
-  }
 
   .nav-list {
     display: flex;
@@ -55,6 +50,11 @@
         > a {
           color: #fff;
         }
+      }
+    }
+    @media (max-width: at-most($small)) {
+      .nav-not-essential {
+        display: none;
       }
     }
   }
