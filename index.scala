@@ -7,6 +7,9 @@ import scalatags.Text.tags2.{title, style, section}
 val inscriptionLink =
   "https://docs.google.com/forms/d/e/1FAIpQLSeu8ZHdog42LRXl4MPZAsOylifXWIY00o5mtw3Q987Q9G6cZA/viewform"
 
+val inscriptionLabel =
+  "S’inscrire pour 2025-26"
+
 val contactMail = "contact@asso-triple-a.org"
 
 val aHrefFFA = a(
@@ -62,7 +65,7 @@ object BIAWebsite {
               )
             ),
             a(cls := "nav-inscription-link", href := inscriptionLink)(
-              "S’incrire"
+              inscriptionLabel
             )
           ),
 
@@ -362,7 +365,7 @@ object BIAWebsite {
         a(
           href := inscriptionLink,
           cls := "button style1 large",
-          "S’inscrire"
+          inscriptionLabel
         )
       )
     )
