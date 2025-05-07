@@ -1,7 +1,7 @@
-//> using scala "3.5.0"
+//> using scala "3.7.0"
 //> using dep "com.lihaoyi::scalatags:0.13.1"
 
-import scalatags.Text.all._
+import scalatags.Text.all.*
 import scalatags.Text.tags2.{title, style, section}
 
 val inscriptionLink =
