@@ -5,7 +5,7 @@ import scalatags.Text.all._
 import scalatags.Text.tags2.{title, style, section}
 
 val inscriptionLink =
-  "https://docs.google.com/forms/d/e/1FAIpQLSdFUCkiHjYpZ714cT6zaPTPSlPBZNL_CmDl9eFY2xCnag6KLQ/viewform"
+  "https://docs.google.com/forms/d/e/1FAIpQLSeu8ZHdog42LRXl4MPZAsOylifXWIY00o5mtw3Q987Q9G6cZA/viewform"
 
 val contactMail = "contact@asso-triple-a.org"
 
