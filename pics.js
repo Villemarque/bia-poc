@@ -1,3 +1,5 @@
+// run with `node pics.js [--new-baseline]`
+
 import puppeteer from "puppeteer";
 import readline from "readline";
 import { program } from "commander";

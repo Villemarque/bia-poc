@@ -5,10 +5,10 @@ import scalatags.Text.all.*
 import scalatags.Text.tags2.{title, style, section}
 
 val inscriptionLink =
-  "https://docs.google.com/forms/d/e/1FAIpQLSeu8ZHdog42LRXl4MPZAsOylifXWIY00o5mtw3Q987Q9G6cZA/viewform"
+  "https://docs.google.com/forms/d/e/1FAIpQLSc5vj9LeefOFBf5AahQAkX4ZHMTFl2YKQoUDF3pKAjEMQXFRQ/viewform"
 
 val inscriptionLabel =
-  "S’inscrire pour 2025-26"
+  "S’inscrire pour 2026-27"
 
 val contactMail = "contact@asso-triple-a.org"
 
