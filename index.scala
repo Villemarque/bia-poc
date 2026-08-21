@@ -8,7 +8,7 @@ val inscriptionLink =
   "https://docs.google.com/forms/d/e/1FAIpQLSc5vj9LeefOFBf5AahQAkX4ZHMTFl2YKQoUDF3pKAjEMQXFRQ/viewform"
 
 val inscriptionLabel =
-  "S’inscrire pour 2026-27"
+  "Inscriptions 2026-27"
 
 val contactMail = "contact@asso-triple-a.org"
 
