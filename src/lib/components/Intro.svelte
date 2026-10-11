@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ffaUrl, ffaLabel } from "$lib/config";
+	import { ffaUrl, ffaLabel } from "#lib/config.js";
 </script>
 
 <section id="intro" class="wrapper style1">

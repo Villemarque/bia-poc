@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { inscriptionLink, inscriptionLabel } from "$lib/config";
+	import { inscriptionLink, inscriptionLabel } from "#lib/config.js";
 </script>
 
 <div id="nav">

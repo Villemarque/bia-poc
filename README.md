@@ -51,12 +51,13 @@ pnpm pics --port 9222
 ```
 
 Notes:
+
 - Modern Chrome ignores `--remote-debugging-port` on the default profile, so a
   separate `--user-data-dir` is required.
 - Reusing one Chrome instance avoids relaunch overhead across runs; just make
   sure to close it (`kill %1`) when done.
 - The screenshots load in the connected Chrome instance, so the `--url` must be
-  reachable *from where Chrome runs*. When reusing a Chrome on another machine,
+  reachable _from where Chrome runs_. When reusing a Chrome on another machine,
   serve the site there (e.g. `python3 -m http.server 8000`) rather than next to
   `pics.ts`.
 - Chrome's debug endpoint rejects requests whose `Host` header is not an IP or

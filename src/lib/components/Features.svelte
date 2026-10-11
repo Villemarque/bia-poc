@@ -1,6 +1,6 @@
 <script lang="ts">
-	import InscriptionButton from "$lib/components/InscriptionButton.svelte";
-	import { ffaUrl, ffaLabel } from "$lib/config";
+	import InscriptionButton from "#lib/components/InscriptionButton.svelte";
+	import { ffaUrl, ffaLabel } from "#lib/config.js";
 </script>
 
 <section id="main" class="wrapper style2">
