@@ -12,6 +12,16 @@
     "css": "sass assets/sass:assets/css",
     "css-w": "sass --watch assets/sass/main.scss assets/css/main.css",
     "build": "sass assets/sass/main.scss assets/css/main.css",
+    "pics": "tsx pics.ts",
+    "styles": "tsx bin/compare-styles.ts",
+    "typecheck": "tsc --noEmit",
     "format": "prettier --log-level warn --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
   }
 }

@@ -10,3 +10,11 @@ index2.html
 index.html
 pics/*
 target/
+
+# SvelteKit / Vite (v2/)
+v2/.svelte-kit/
+v2/build/
+v2/node_modules/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.pnpm-store/
