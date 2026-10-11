@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { contactMail } from "$lib/config";
+	import { contactMail } from "#lib/config.js";
 </script>
 
 <section id="footer" class="wrapper">

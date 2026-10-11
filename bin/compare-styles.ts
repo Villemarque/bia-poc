@@ -34,54 +34,177 @@ import path from "path";
 
 // Properties compared per element. Layout, box model, typography, colour, effects.
 const PROPS = [
-  "display", "position", "top", "right", "bottom", "left", "width", "height",
-  "min-width", "min-height", "max-width", "max-height",
-  "margin-top", "margin-right", "margin-bottom", "margin-left",
-  "padding-top", "padding-right", "padding-bottom", "padding-left",
-  "border-top-width", "border-right-width", "border-bottom-width", "border-left-width",
-  "border-top-style", "border-top-color", "border-bottom-color", "border-radius",
-  "box-sizing", "overflow", "overflow-x", "overflow-y", "float", "clear",
-  "flex-direction", "flex-wrap", "justify-content", "align-items", "align-self",
-  "flex-grow", "flex-shrink", "flex-basis", "gap", "order",
-  "grid-template-columns", "grid-column", "grid-template-rows",
-  "z-index", "opacity", "transform", "transform-origin", "visibility", "pointer-events",
-  "backface-visibility", "will-change",
-  "font-family", "font-size", "font-weight", "font-style", "line-height", "letter-spacing",
-  "font-kerning", "font-feature-settings", "font-variation-settings",
-  "-webkit-font-smoothing", "-moz-osx-font-smoothing", "text-rendering", "text-size-adjust",
-  "-webkit-text-size-adjust", "image-rendering",
-  "text-align", "text-decoration-line", "text-transform", "white-space", "text-indent",
-  "color", "background-color", "background-image", "background-position", "background-size",
-  "background-repeat", "background-clip", "background-attachment", "background-blend-mode",
-  "list-style-type", "vertical-align", "box-shadow", "text-shadow", "filter", "mix-blend-mode",
-  "object-fit", "cursor", "content",
+  "display",
+  "position",
+  "top",
+  "right",
+  "bottom",
+  "left",
+  "width",
+  "height",
+  "min-width",
+  "min-height",
+  "max-width",
+  "max-height",
+  "margin-top",
+  "margin-right",
+  "margin-bottom",
+  "margin-left",
+  "padding-top",
+  "padding-right",
+  "padding-bottom",
+  "padding-left",
+  "border-top-width",
+  "border-right-width",
+  "border-bottom-width",
+  "border-left-width",
+  "border-top-style",
+  "border-top-color",
+  "border-bottom-color",
+  "border-radius",
+  "box-sizing",
+  "overflow",
+  "overflow-x",
+  "overflow-y",
+  "float",
+  "clear",
+  "flex-direction",
+  "flex-wrap",
+  "justify-content",
+  "align-items",
+  "align-self",
+  "flex-grow",
+  "flex-shrink",
+  "flex-basis",
+  "gap",
+  "order",
+  "grid-template-columns",
+  "grid-column",
+  "grid-template-rows",
+  "z-index",
+  "opacity",
+  "transform",
+  "transform-origin",
+  "visibility",
+  "pointer-events",
+  "backface-visibility",
+  "will-change",
+  "font-family",
+  "font-size",
+  "font-weight",
+  "font-style",
+  "line-height",
+  "letter-spacing",
+  "font-kerning",
+  "font-feature-settings",
+  "font-variation-settings",
+  "-webkit-font-smoothing",
+  "-moz-osx-font-smoothing",
+  "text-rendering",
+  "text-size-adjust",
+  "-webkit-text-size-adjust",
+  "image-rendering",
+  "text-align",
+  "text-decoration-line",
+  "text-transform",
+  "white-space",
+  "text-indent",
+  "color",
+  "background-color",
+  "background-image",
+  "background-position",
+  "background-size",
+  "background-repeat",
+  "background-clip",
+  "background-attachment",
+  "background-blend-mode",
+  "list-style-type",
+  "vertical-align",
+  "box-shadow",
+  "text-shadow",
+  "filter",
+  "mix-blend-mode",
+  "object-fit",
+  "cursor",
+  "content",
 ];
 const PSEUDO_PROPS = [
-  "content", "display", "width", "height", "color", "background-color", "background-image",
-  "font-family", "font-size", "position", "margin-left", "margin-right", "top", "left",
-  "transform", "opacity",
+  "content",
+  "display",
+  "width",
+  "height",
+  "color",
+  "background-color",
+  "background-image",
+  "font-family",
+  "font-size",
+  "position",
+  "margin-left",
+  "margin-right",
+  "top",
+  "left",
+  "transform",
+  "opacity",
 ];
 // Non-visual / layout-transparent elements are skipped so the trees align.
-const SKIP_TAGS = new Set(["script", "style", "link", "meta", "title", "noscript", "template", "base"]);
+const SKIP_TAGS = new Set([
+  "script",
+  "style",
+  "link",
+  "meta",
+  "title",
+  "noscript",
+  "template",
+  "base",
+]);
 
 const MIME: Record<string, string> = {
-  ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".mjs": "text/javascript",
-  ".json": "application/json", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
-  ".gif": "image/gif", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".webp": "image/webp",
-  ".woff": "font/woff", ".woff2": "font/woff2", ".ttf": "font/ttf", ".otf": "font/otf",
+  ".html": "text/html",
+  ".css": "text/css",
+  ".js": "text/javascript",
+  ".mjs": "text/javascript",
+  ".json": "application/json",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".gif": "image/gif",
+  ".svg": "image/svg+xml",
+  ".ico": "image/x-icon",
+  ".webp": "image/webp",
+  ".woff": "font/woff",
+  ".woff2": "font/woff2",
+  ".ttf": "font/ttf",
+  ".otf": "font/otf",
   ".eot": "application/vnd.ms-fontobject",
 };
 
 type El = {
-  i: number; parent: number; tag: string; id: string; classes: string[];
-  href: string; label: string; props: Record<string, string>;
+  i: number;
+  parent: number;
+  tag: string;
+  id: string;
+  classes: string[];
+  href: string;
+  label: string;
+  props: Record<string, string>;
 };
 
 const desc = (e: El) =>
-  e.tag + (e.id ? "#" + e.id : "") + (e.classes.length ? "." + e.classes.join(".") : "");
+  e.tag +
+  (e.id ? "#" + e.id : "") +
+  (e.classes.length ? "." + e.classes.join(".") : "");
 
 function parseArgs(argv: string[]) {
-  const out: any = { oldDir: argv[0], newDir: argv[1], port: 9222, origin: "http://localhost:8000", widths: "1440,1024,800,360", report: 40, json: null, fail: false };
+  const out: any = {
+    oldDir: argv[0],
+    newDir: argv[1],
+    port: 9222,
+    origin: "http://localhost:8000",
+    widths: "1440,1024,800,360",
+    report: 40,
+    json: null,
+    fail: false,
+  };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--port") out.port = parseInt(argv[++i], 10);
@@ -93,13 +216,20 @@ function parseArgs(argv: string[]) {
     else throw new Error(`unknown option: ${a}`);
   }
   if (!out.oldDir || !out.newDir) {
-    console.error("usage: tsx bin/compare-styles.ts <oldDir> <newDir> [--port n] [--origin url] [--widths a,b,c] [--report n] [--json file] [--fail]");
+    console.error(
+      "usage: tsx bin/compare-styles.ts <oldDir> <newDir> [--port n] [--origin url] [--widths a,b,c] [--report n] [--json file] [--fail]",
+    );
     process.exit(2);
   }
   return out;
 }
 
-async function dump(browser: Browser, rootDir: string, origin: string, width: number): Promise<El[]> {
+async function dump(
+  browser: Browser,
+  rootDir: string,
+  origin: string,
+  width: number,
+): Promise<El[]> {
   const root = path.resolve(rootDir);
   const page = await browser.newPage();
   await page.setRequestInterception(true);
@@ -109,8 +239,18 @@ async function dump(browser: Browser, rootDir: string, origin: string, width: nu
       let rel = decodeURIComponent(u.pathname);
       if (rel.endsWith("/")) rel += "index.html";
       const file = path.join(root, rel);
-      if (file.startsWith(root) && fs.existsSync(file) && fs.statSync(file).isFile()) {
-        req.respond({ status: 200, contentType: MIME[path.extname(file).toLowerCase()] || "application/octet-stream", body: fs.readFileSync(file) });
+      if (
+        file.startsWith(root) &&
+        fs.existsSync(file) &&
+        fs.statSync(file).isFile()
+      ) {
+        req.respond({
+          status: 200,
+          contentType:
+            MIME[path.extname(file).toLowerCase()] ||
+            "application/octet-stream",
+          body: fs.readFileSync(file),
+        });
       } else {
         // external (e.g. Google Fonts): let the browser fetch it, so both sites
         // are measured with the same fonts loaded.
@@ -123,47 +263,70 @@ async function dump(browser: Browser, rootDir: string, origin: string, width: nu
   await page.setViewport({ width, height: 7000 });
   // tsx/esbuild injects a `__name` helper into functions sent to evaluate(); define
   // a no-op in the page so the serialized function can resolve it.
-  await page.evaluateOnNewDocument("globalThis.__name = globalThis.__name || function (fn) { return fn; };");
+  await page.evaluateOnNewDocument(
+    "globalThis.__name = globalThis.__name || function (fn) { return fn; };",
+  );
   await page.goto(origin + "/", { waitUntil: "load", timeout: 30000 });
   await page.evaluate(() => document.fonts && document.fonts.ready);
   await new Promise((r) => setTimeout(r, 400));
 
-  const data = await page.evaluate((cfg: { PROPS: string[]; PSEUDO_PROPS: string[]; SKIP_TAGS: string[] }) => {
-    const norm = (v: any) => (v == null ? "" : String(v).replace(/\s+/g, " ").trim());
-    const skip = new Set(cfg.SKIP_TAGS);
-    const out: any[] = [];
-    const walk = (el: Element, parent: number) => {
-      const tag = el.tagName.toLowerCase();
-      if (skip.has(tag) || el.id === "svelte-announcer") return;
-      const cs0 = getComputedStyle(el);
-      if (cs0.display === "contents") {
-        for (const c of el.children) walk(c, parent);
-        return;
-      }
-      const classes = (el.getAttribute("class") || "")
-        .split(/\s+/).filter((c) => c && !/^svelte-/.test(c)).sort();
-      const idx = out.length;
-      const props: Record<string, string> = {};
-      for (const pr of cfg.PROPS) props[pr] = norm(cs0.getPropertyValue(pr));
-      const r = el.getBoundingClientRect();
-      props["rect.x"] = r.x.toFixed(2);
-      props["rect.y"] = (r.y + window.scrollY).toFixed(2);
-      props["rect.w"] = r.width.toFixed(2);
-      props["rect.h"] = r.height.toFixed(2);
-      for (const pe of ["::before", "::after"]) {
-        const cs = getComputedStyle(el, pe);
-        for (const pr of cfg.PSEUDO_PROPS) {
-          const v = norm(cs.getPropertyValue(pr));
-          if (v && v !== "none" && v !== "normal" && v !== "auto" && v !== "0px")
-            props[pe + "." + pr] = v;
+  const data = await page.evaluate(
+    (cfg: { PROPS: string[]; PSEUDO_PROPS: string[]; SKIP_TAGS: string[] }) => {
+      const norm = (v: any) =>
+        v == null ? "" : String(v).replace(/\s+/g, " ").trim();
+      const skip = new Set(cfg.SKIP_TAGS);
+      const out: any[] = [];
+      const walk = (el: Element, parent: number) => {
+        const tag = el.tagName.toLowerCase();
+        if (skip.has(tag) || el.id === "svelte-announcer") return;
+        const cs0 = getComputedStyle(el);
+        if (cs0.display === "contents") {
+          for (const c of el.children) walk(c, parent);
+          return;
         }
-      }
-      out.push({ i: idx, parent, tag, id: el.id || "", classes, href: el.getAttribute("href") || "", label: norm(el.textContent).slice(0, 40), props });
-      for (const c of el.children) walk(c, idx);
-    };
-    walk(document.documentElement, -1);
-    return out;
-  }, { PROPS, PSEUDO_PROPS, SKIP_TAGS: [...SKIP_TAGS] });
+        const classes = (el.getAttribute("class") || "")
+          .split(/\s+/)
+          .filter((c) => c && !/^svelte-/.test(c))
+          .sort();
+        const idx = out.length;
+        const props: Record<string, string> = {};
+        for (const pr of cfg.PROPS) props[pr] = norm(cs0.getPropertyValue(pr));
+        const r = el.getBoundingClientRect();
+        props["rect.x"] = r.x.toFixed(2);
+        props["rect.y"] = (r.y + window.scrollY).toFixed(2);
+        props["rect.w"] = r.width.toFixed(2);
+        props["rect.h"] = r.height.toFixed(2);
+        for (const pe of ["::before", "::after"]) {
+          const cs = getComputedStyle(el, pe);
+          for (const pr of cfg.PSEUDO_PROPS) {
+            const v = norm(cs.getPropertyValue(pr));
+            if (
+              v &&
+              v !== "none" &&
+              v !== "normal" &&
+              v !== "auto" &&
+              v !== "0px"
+            )
+              props[pe + "." + pr] = v;
+          }
+        }
+        out.push({
+          i: idx,
+          parent,
+          tag,
+          id: el.id || "",
+          classes,
+          href: el.getAttribute("href") || "",
+          label: norm(el.textContent).slice(0, 40),
+          props,
+        });
+        for (const c of el.children) walk(c, idx);
+      };
+      walk(document.documentElement, -1);
+      return out;
+    },
+    { PROPS, PSEUDO_PROPS, SKIP_TAGS: [...SKIP_TAGS] },
+  );
 
   await page.close();
   return data as El[];
@@ -206,10 +369,15 @@ function align(oldArr: El[], newArr: El[]) {
       for (const bk of bKids) {
         if (used.has(bk.i)) continue;
         const s = score(ak, bk);
-        if (s > bestScore) { best = bk; bestScore = s; }
+        if (s > bestScore) {
+          best = bk;
+          bestScore = s;
+        }
       }
-      if (best) { used.add(best!.i); match(ak, best!); }
-      else unmatchedOld.push(ak);
+      if (best) {
+        used.add(best!.i);
+        match(ak, best!);
+      } else unmatchedOld.push(ak);
     }
     for (const bk of bKids) if (!used.has(bk.i)) unmatchedNew.push(bk);
   };
@@ -221,11 +389,18 @@ async function main() {
   const opt = parseArgs(process.argv.slice(2));
   const widths: [string, number][] = opt.widths.split(",").map((w: string) => {
     const n = parseInt(w, 10);
-    const names: Record<number, string> = { 1440: "xlarge", 1024: "large", 800: "medium", 360: "small" };
+    const names: Record<number, string> = {
+      1440: "xlarge",
+      1024: "large",
+      800: "medium",
+      360: "small",
+    };
     return [names[n] || String(n), n];
   });
 
-  const browser = await puppeteer.connect({ browserURL: `http://localhost:${opt.port}` });
+  const browser = await puppeteer.connect({
+    browserURL: `http://localhost:${opt.port}`,
+  });
   let anyDiff = false;
   const jsonOut: any = {};
 
@@ -247,14 +422,23 @@ async function main() {
       if (diffs.length) reports.push({ el: desc(o), label: o.label, diffs });
     }
     reports.sort((a, b) => b.diffs.length - a.diffs.length);
-    if (reports.length || unmatchedOld.length || unmatchedNew.length) anyDiff = true;
+    if (reports.length || unmatchedOld.length || unmatchedNew.length)
+      anyDiff = true;
 
     console.log("#".repeat(70));
     console.log(`# width=${width} (${name})`);
     console.log("#".repeat(70));
-    console.log(`elements: old=${oldArr.length} new=${newArr.length} matched=${pairs.length} unmatched(old=${unmatchedOld.length}, new=${unmatchedNew.length})`);
-    if (unmatchedOld.length) console.log(`  unmatched old: ${unmatchedOld.map(desc).slice(0, 20).join(", ")}`);
-    if (unmatchedNew.length) console.log(`  unmatched new: ${unmatchedNew.map(desc).slice(0, 20).join(", ")}`);
+    console.log(
+      `elements: old=${oldArr.length} new=${newArr.length} matched=${pairs.length} unmatched(old=${unmatchedOld.length}, new=${unmatchedNew.length})`,
+    );
+    if (unmatchedOld.length)
+      console.log(
+        `  unmatched old: ${unmatchedOld.map(desc).slice(0, 20).join(", ")}`,
+      );
+    if (unmatchedNew.length)
+      console.log(
+        `  unmatched new: ${unmatchedNew.map(desc).slice(0, 20).join(", ")}`,
+      );
     console.log(`elements with differing props: ${reports.length}`);
     if (propCount.size) {
       console.log("properties by #elements differing:");
@@ -263,9 +447,17 @@ async function main() {
     }
     for (const r of reports.slice(0, opt.report)) {
       console.log(`\n[${r.el}] "${r.label}"`);
-      for (const d of r.diffs) console.log(`    ${d.prop}: ${JSON.stringify(d.old)} -> ${JSON.stringify(d.new)}`);
+      for (const d of r.diffs)
+        console.log(
+          `    ${d.prop}: ${JSON.stringify(d.old)} -> ${JSON.stringify(d.new)}`,
+        );
     }
-    jsonOut[name] = { width, reports, unmatchedOld: unmatchedOld.map(desc), unmatchedNew: unmatchedNew.map(desc) };
+    jsonOut[name] = {
+      width,
+      reports,
+      unmatchedOld: unmatchedOld.map(desc),
+      unmatchedNew: unmatchedNew.map(desc),
+    };
   }
 
   await browser.disconnect();

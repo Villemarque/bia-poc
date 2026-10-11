@@ -32,9 +32,16 @@ const differentScreenshots = (
   const { width, height } = img1;
   const diff = new PNG({ width, height });
   try {
-    const mismatchCount = pixelmatch(img1.data, img2.data, diff.data, width, height, {
-      threshold: 0.1,
-    });
+    const mismatchCount = pixelmatch(
+      img1.data,
+      img2.data,
+      diff.data,
+      width,
+      height,
+      {
+        threshold: 0.1,
+      },
+    );
     // pixelmatch returns the number of mismatched pixels; 0 means identical
     const isDifferent = mismatchCount > 0;
     if (isDifferent) {
@@ -146,14 +153,18 @@ const makeDirs = (): void => {
     fs.rm("pics/diff/", { recursive: true }, callback);
   }
   const browser = options.port
-    ? await puppeteer.connect({ browserURL: `http://localhost:${options.port}` })
+    ? await puppeteer.connect({
+        browserURL: `http://localhost:${options.port}`,
+      })
     : await puppeteer.launch();
   const page = await browser.newPage();
 
   let changed = false;
 
   for (const [widthName, width] of Object.entries(widthObj)) {
-    changed = (await takeScreenshot(url, page, widthName, width, forceBaseline)) || changed;
+    changed =
+      (await takeScreenshot(url, page, widthName, width, forceBaseline)) ||
+      changed;
   }
   if (options.port) {
     await browser.disconnect();

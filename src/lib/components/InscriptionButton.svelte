@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { inscriptionLink, inscriptionLabel } from "$lib/config";
+	import { inscriptionLink, inscriptionLabel } from "#lib/config.js";
 
 	let { isFeatures = false }: { isFeatures?: boolean } = $props();
 </script>

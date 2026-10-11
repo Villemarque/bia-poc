@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Topic from "$lib/components/Topic.svelte";
-	import InscriptionButton from "$lib/components/InscriptionButton.svelte";
-	import { topics } from "$lib/config";
+	import Topic from "#lib/components/Topic.svelte";
+	import InscriptionButton from "#lib/components/InscriptionButton.svelte";
+	import { topics } from "#lib/config.js";
 </script>
 
 <section id="highlights" class="wrapper style3">
