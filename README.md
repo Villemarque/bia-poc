@@ -1,14 +1,26 @@
 # Bia Proof of Concept
 
+Static, prerendered one-pager built with [SvelteKit](https://svelte.dev/docs/kit)
+and `@sveltejs/adapter-static`. Styles live in the components' `<style>` blocks —
+there is no separate CSS/Sass build step.
+
 ## Install
 
-`pnpm install`
-to generate CSS run `pnpm run build`
+```sh
+pnpm install
+```
 
-to generate the HTML, you need a working JVM, with `scala-cli` installed.
-Then `scala-cli index.scala > index.html`
+## Develop / build
 
-To format, `pnpm run format` and `scala-cli fmt`.
+```sh
+pnpm dev        # dev server
+pnpm build      # static build -> build/
+pnpm preview    # serve the built site locally
+pnpm check      # svelte-check (components)
+pnpm typecheck  # tsc for the Node tooling (pics.ts, bin/)
+```
+
+To format, `pnpm run format`.
 
 ## Visual regression (pics.ts)
 
@@ -21,11 +33,10 @@ pnpm pics --url http://localhost:8000   # point at a different URL
 pnpm pics --new-baseline       # (re)create the baselines
 ```
 
-Serve the site locally with Python's built-in server (matches the default
-`http://localhost:8000` URL):
+Serve the built site (`build/`) at the default `http://localhost:8000`, e.g.:
 
 ```sh
-python3 -m http.server 8000
+pnpm build && python3 -m http.server 8000 --directory build
 ```
 
 By default it launches its own (downloaded) Chrome. To reuse a Chrome instance
@@ -69,9 +80,9 @@ exactly which element and which property diverged. It is environment-independent
 and a better first gate for a migration/refactor; reach for it before pixel diffs.
 
 ```sh
-pnpm styles <oldDir> <newDir>          # e.g. pnpm styles . v2/build
-pnpm styles . v2/build --report 100
-pnpm styles . v2/build --json /tmp/styles.json --fail   # non-zero exit on any diff
+pnpm styles <oldDir> <newDir>          # e.g. pnpm styles . build
+pnpm styles . build --report 100
+pnpm styles . build --json /tmp/styles.json --fail   # non-zero exit on any diff
 ```
 
 Options: `--port` (Chrome debug port, default 9222), `--origin` (URL used for

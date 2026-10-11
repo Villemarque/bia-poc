@@ -1,27 +1,37 @@
 {
+  "name": "bia-poc",
+  "version": "0.0.1",
+  "private": true,
   "type": "module",
+  "packageManager": "pnpm@12.8.1",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "typecheck": "tsc -p tsconfig.tools.json",
+    "pics": "tsx pics.ts",
+    "styles": "tsx bin/compare-styles.ts",
+    "format": "prettier --log-level warn --write ."
+  },
   "dependencies": {
     "commander": "^12.1.0",
     "pixelmatch": "^6.0.0",
     "pngjs": "^7.0.0",
     "prettier": "^3.3.3",
-    "puppeteer": "^23.4.0",
-    "sass": "^1.77.8"
-  },
-  "scripts": {
-    "css": "sass assets/sass:assets/css",
-    "css-w": "sass --watch assets/sass/main.scss assets/css/main.css",
-    "build": "sass assets/sass/main.scss assets/css/main.css",
-    "pics": "tsx pics.ts",
-    "styles": "tsx bin/compare-styles.ts",
-    "typecheck": "tsc --noEmit",
-    "format": "prettier --log-level warn --write ."
+    "puppeteer": "^23.4.0"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.70.3",
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
     "@types/node": "^26.2.0",
     "@types/pixelmatch": "^5.2.6",
     "@types/pngjs": "^6.0.5",
+    "svelte": "^5.56.10",
+    "svelte-check": "^4.7.6",
     "tsx": "^4.23.12",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3",
+    "vite": "^8.2.2"
   }
 }
