@@ -3,9 +3,13 @@
 </script>
 
 <div id="nav">
+	<!-- svelte-ignore a11y_invalid_attribute -->
 	<a href="#"><img src="/images/logo-white.svg" alt="logo" class="nav-logo" /></a>
 	<ul class="nav-list">
-		<li class="nav-not-essential nav-item"><a href="#">Accueil</a></li>
+		<li class="nav-not-essential nav-item">
+			<!-- svelte-ignore a11y_invalid_attribute -->
+			<a href="#">Accueil</a>
+		</li>
 		<li class="nav-item"><a href="#highlights">Le BIA</a></li>
 		<li class="nav-item"><a href="#features">Les cours</a></li>
 		<li class="nav-not-essential nav-item"><a href="#intro">Nous connaitre</a></li>
@@ -56,8 +60,7 @@
 		padding: 0.5rem 1rem;
 	}
 
-	.nav-item > a,
-	.nav-item > span {
+	.nav-item > a {
 		color: rgba(255, 255, 255, 0.75);
 		text-decoration: none;
 		font-size: 16px;

@@ -59,14 +59,9 @@
 		padding: 6em 0 9em 0;
 	}
 
-	#footer h1,
 	#footer h2,
 	#footer h3,
-	#footer h4,
-	#footer h5,
-	#footer h6,
 	#footer strong,
-	#footer b,
 	#footer a {
 		color: #fff;
 	}

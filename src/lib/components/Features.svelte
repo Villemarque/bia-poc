@@ -134,13 +134,6 @@
 		padding: 3em 0 3em 0;
 	}
 
-	header.style1 h2 {
-		font-weight: 700;
-		font-size: 2em;
-		letter-spacing: 0.075em;
-		line-height: 1.5em;
-	}
-
 	header.style1 p {
 		color: #989ba0;
 		display: block;
@@ -331,12 +324,6 @@
 
 		header.style1 {
 			padding: 0 0 1em 0;
-		}
-
-		header.style1 h2 {
-			font-size: 1.5em;
-			letter-spacing: 0.075em;
-			line-height: 1.25em;
 		}
 
 		header.style1 p {

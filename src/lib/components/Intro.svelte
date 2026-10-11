@@ -63,14 +63,6 @@
 		color: rgba(255, 255, 255, 0.75);
 	}
 
-	.wrapper.style1 h1,
-	.wrapper.style1 h2,
-	.wrapper.style1 h3,
-	.wrapper.style1 h4,
-	.wrapper.style1 h5,
-	.wrapper.style1 h6,
-	.wrapper.style1 strong,
-	.wrapper.style1 b,
 	.wrapper.style1 a {
 		color: #fff;
 	}
