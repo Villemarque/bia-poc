@@ -12,7 +12,7 @@
 		justify-content: center;
 		position: relative;
 		height: 35em;
-		background: url("/images/ia-runway.png") center top;
+		background: url("/images/ia-runway.webp") center top;
 		padding: 0;
 		margin-bottom: 0;
 	}

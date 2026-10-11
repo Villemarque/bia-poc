@@ -31,9 +31,17 @@ live in `src/lib/assets/images/` and are referenced with `<enhanced:img>` (via
 variants and a responsive `srcset`.
 
 `src/lib/assets/` must not be moved: enhanced-img only processes files that are
-part of the Vite module graph. SVGs (`logo*.svg`), `favicon.ico`, and the CSS
-background (`ia-runway.png`) stay in `static/images/` and are served as-is —
-enhanced-img only handles `<img>` elements, not CSS backgrounds.
+part of the Vite module graph. SVGs (`logo*.svg`) and `favicon.ico` stay in
+`static/images/` and are served as-is — enhanced-img only handles `<img>`
+elements, not CSS backgrounds.
+
+The `#header` background is pre-compressed instead: the original PNG is kept at
+`src/lib/assets/images/ia-runway.png` (tracked but not shipped) and the webp
+served from `static/images/ia-runway.webp` is regenerated from it with:
+
+```sh
+cwebp -q 82 src/lib/assets/images/ia-runway.png -o static/images/ia-runway.webp
+```
 
 ## Visual regression (pics.ts)
 
