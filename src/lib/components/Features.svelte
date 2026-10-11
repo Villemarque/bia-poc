@@ -1,12 +1,20 @@
 <script lang="ts">
 	import InscriptionButton from "#lib/components/InscriptionButton.svelte";
 	import { ffaUrl, ffaLabel } from "#lib/config.js";
+	import laptopThrottle from "../assets/images/laptop-throttle.png?enhanced";
 </script>
 
 <section id="main" class="wrapper style2">
 	<div class="title">Les cours</div>
 	<div class="container">
-		<div class="image featured"><img src="/images/laptop-throttle.png" alt="" /></div>
+		<div class="image featured"
+			><enhanced:img
+				class="featured-image"
+				src={laptopThrottle}
+				alt=""
+				sizes="(max-width: 979.29px) 100vw, 1120px"
+			/></div
+		>
 		<section id="features">
 			<header class="style1">
 				<p>
@@ -124,9 +132,10 @@
 		margin: 0 0 2em 0;
 	}
 
-	.image img {
+	.featured-image {
 		display: block;
 		width: 100%;
+		height: auto;
 	}
 
 	header.style1 {

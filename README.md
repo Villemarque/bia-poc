@@ -22,6 +22,19 @@ pnpm typecheck  # tsc for the Node tooling (pics.ts, bin/)
 
 To format, `pnpm run format`.
 
+## Images
+
+Raster photos are optimized at build time with
+[`@sveltejs/enhanced-img`](https://svelte.dev/docs/kit/images). The originals
+live in `src/lib/assets/images/` and are referenced with `<enhanced:img>` (via
+`?enhanced` imports), which emits a `<picture>` with `avif`/`webp`/fallback
+variants and a responsive `srcset`.
+
+`src/lib/assets/` must not be moved: enhanced-img only processes files that are
+part of the Vite module graph. SVGs (`logo*.svg`), `favicon.ico`, and the CSS
+background (`ia-runway.png`) stay in `static/images/` and are served as-is —
+enhanced-img only handles `<img>` elements, not CSS backgrounds.
+
 ## Visual regression (pics.ts)
 
 `pics.ts` takes screenshots of the page at 4 widths and compares them against

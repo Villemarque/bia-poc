@@ -1,10 +1,16 @@
 <script lang="ts">
-	let { title, img, description }: { title: string; img: string; description: string } =
+	import type { Picture } from "@sveltejs/enhanced-img";
+	let { title, img, description }: { title: string; img: Picture; description: string } =
 		$props();
 </script>
 
 <section class="highlight">
-	<img src={img} class="image featured" alt="" />
+	<enhanced:img
+		src={img}
+		class="image featured"
+		alt=""
+		sizes="(max-width: 979.29px) 100vw, 320px"
+	/>
 	<h3>{title}</h3>
 	<p>{description}</p>
 </section>
@@ -24,6 +30,7 @@
 	.image.featured {
 		display: block;
 		width: 100%;
+		height: auto;
 		margin: 0 0 2em 0;
 		border: solid 10px #fff;
 	}
