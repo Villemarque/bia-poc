@@ -47,7 +47,7 @@
 
 <style>
 	#footer {
-		background: #282b34;
+		background: var(--color-footer);
 		color: #eee;
 		color: rgba(255, 255, 255, 0.5);
 		padding-bottom: 6em;
@@ -83,7 +83,7 @@
 		margin-bottom: -3.25em;
 		margin-left: -12.5em;
 		padding-top: 0.5em;
-		background: #282b34;
+		background: var(--color-footer);
 		color: #eee;
 	}
 
@@ -125,7 +125,7 @@
 	}
 
 	header.style1 p {
-		color: #989ba0;
+		color: var(--color-ink-faint);
 		display: block;
 		margin: 1.15em 0 0 0;
 		font-size: 1.3em;
@@ -175,7 +175,7 @@
 	}
 
 	.feature-list h3 {
-		color: #e97770 !important;
+		color: var(--color-accent) !important;
 		margin: -0.35em 0 0.75em 0;
 		font-size: 1.15em;
 		letter-spacing: 0.05em;
@@ -184,7 +184,7 @@
 	.feature-list h3:before {
 		display: block;
 		color: #fff;
-		background: #2f333b;
+		background: var(--color-icon-circle);
 		border-radius: 2.5em;
 		text-align: center;
 		width: 2.5em;

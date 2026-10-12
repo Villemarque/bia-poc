@@ -39,7 +39,7 @@
 			<a href="#features" class:active={active === "features"}>Les cours</a>
 		</li>
 		<li class="nav-not-essential nav-item">
-			<a href="#intro" class:active={active === "intro"}>Nous connaitre</a>
+			<a href="#intro" class:active={active === "intro"}>Nous connaître</a>
 		</li>
 		<li class="nav-not-essential nav-item">
 			<a href="#footer" class:active={active === "footer"}>Devenir volontaire</a>
@@ -50,7 +50,7 @@
 
 <style>
 	#nav {
-		--nav-dark-blue: #000a33;
+		--nav-dark-blue: var(--color-nav);
 		--nav-yellow: #ffe484;
 
 		position: fixed;

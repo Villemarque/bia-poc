@@ -22,6 +22,23 @@ pnpm typecheck  # tsc for the Node tooling (pics.ts, bin/)
 
 To format, `pnpm run format`.
 
+## Styling
+
+Styles are component-scoped (`<style>` in each `.svelte`) — there is no separate
+CSS build. The only global stylesheets are Font Awesome and the self-hosted font
+CSS. Global CSS is kept to the reset + base typography in
+`src/routes/+layout.svelte`.
+
+Shared palette and timing values are CSS custom properties defined once in
+`:root` (`src/routes/+layout.svelte`): `--color-accent`, `--color-accent-hover`,
+`--color-accent-active`, `--color-ink`, `--color-ink-muted`, `--color-ink-faint`,
+`--color-heading`, `--color-link`, `--color-nav`, `--color-icon-circle`,
+`--color-footer`, `--transition`. Use these rather than re-declaring literals.
+
+Some section primitives (`.wrapper`, `.title`, `.container`, `.row`, `.icon`) are
+intentionally duplicated per component (scoped) rather than hoisted globally;
+keep new sections consistent with the existing ones when copying.
+
 ## Images
 
 Raster photos are optimized at build time with

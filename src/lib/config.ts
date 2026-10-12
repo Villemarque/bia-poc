@@ -20,7 +20,7 @@ export const topics = [
     title: "Connaissance des aéronefs",
     img: aeronefs,
     description:
-      "Découverte des différents aéronefs ! Etude des parties d’un avion, explication des différents types de moteurs, ainsi que des différents instruments que l’on retrouve dans un cockpit.",
+      "Découverte des différents aéronefs ! Étude des parties d’un avion, explication des différents types de moteurs, ainsi que des différents instruments que l’on retrouve dans un cockpit.",
   },
   {
     title: "Aérodynamique et principes du vol",
@@ -32,18 +32,18 @@ export const topics = [
     title: "Météorologie",
     img: meteo,
     description:
-      "Etude des phénomènes météo ! L’atmosphère, les différents types de nuages, précipitations, mais aussi découverte des fronts, masses d’air, et initiation à la circulation générale atmosphérique.",
+      "Étude des phénomènes météo ! L’atmosphère, les différents types de nuages, précipitations, mais aussi découverte des fronts, masses d’air, et initiation à la circulation générale atmosphérique.",
   },
   {
     title: "Réglementation, sécurité des vols, navigation",
     img: nav,
     description:
-      "Découverte des organisations qui gèrent la réglementation et la gestion de l’espace aérien. Description des facteurs contributifs aux incidents/accidents. Etude des différents moyens de navigation. Préparation d’une navigation en vol d’aéroclub.",
+      "Découverte des organisations qui gèrent la réglementation et la gestion de l’espace aérien. Description des facteurs contributifs aux incidents/accidents. Étude des différents moyens de navigation. Préparation d’une navigation en vol d’aéroclub.",
   },
   {
     title: "Histoire de l’aéronautique et du spatial",
     img: histoire,
     description:
-      "Etude chronologique des faits marquants de l’histoire de l’aviation, du mythe d’Icare à nos jours, en passant par les avancées militaires et les pionniers du XXème siècle. La conquête spatiale est aussi au programme.",
+      "Étude chronologique des faits marquants de l’histoire de l’aviation, du mythe d’Icare à nos jours, en passant par les avancées militaires et les pionniers du XXème siècle. La conquête spatiale est aussi au programme.",
   },
 ];

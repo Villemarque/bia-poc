@@ -1,0 +1,35 @@
+# Lint / type-check / build on every push and PR.
+#
+# NOTE: the pixel (`pics.ts`) and computed-style (`bin/compare-styles.ts`) gates
+# are intentionally not run here: pixel baselines are environment-specific and
+# not committed (`pics/` is gitignored), and the style comparator needs a second
+# ("old") copy of the site to diff against. Run those locally before shipping
+# visual changes.
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Type/A11y check
+        run: pnpm check
+      - name: Type-check tooling
+        run: pnpm typecheck
+      - name: Build
+        run: pnpm build

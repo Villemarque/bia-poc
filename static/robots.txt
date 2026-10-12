@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://villemarque.github.io/bia-poc/sitemap.xml

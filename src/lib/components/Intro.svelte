@@ -3,7 +3,7 @@
 </script>
 
 <section id="intro" class="wrapper style1">
-	<div class="title">Nous connaitre</div>
+	<div class="title">Nous connaître</div>
 	<div class="container">
 		<p class="style3">
 			Créée en décembre 2020,
@@ -58,7 +58,7 @@
 	}
 
 	.wrapper.style1 {
-		background: #e97770;
+		background: var(--color-accent);
 		color: #eee;
 		color: rgba(255, 255, 255, 0.75);
 	}
@@ -84,7 +84,7 @@
 		margin-bottom: -3.25em;
 		margin-left: -12.5em;
 		padding-top: 0.5em;
-		background: #e97770;
+		background: var(--color-accent);
 		color: #fff;
 	}
 

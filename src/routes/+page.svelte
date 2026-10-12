@@ -26,7 +26,7 @@
 		left: -9999px;
 		z-index: 2000;
 		padding: 0.75em 1.25em;
-		background: #000a33;
+		background: var(--color-nav);
 		color: #fff;
 		text-decoration: none;
 	}
