@@ -20,7 +20,7 @@ const svg = (p) =>
     .trim();
 const logo = svg("static/images/logo.svg"); // for light backgrounds
 const logoWhite = svg("static/images/logo-white.svg"); // for dark backgrounds
-const bia = svg("static/images/bia.svg"); // black BIA wordmark (invert for dark)
+const bia = svg("assets/bia.svg"); // black BIA wordmark (invert for dark); not served
 
 // ---- palette ----------------------------------------------------------------
 const colors = [
