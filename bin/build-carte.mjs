@@ -1,12 +1,13 @@
-// Generates assets/carte-visite-v1.svg — a non-personal business card (recto +
+// Generates assets/carte-visite-v2.svg — a non-personal business card (recto +
 // verso, 85×55 mm each) in the charte-graphique style: the website header look
 // (navy + coral accent + uppercase tracked titles), both logos, and a link to
 // the site.
 //
 // v1 = v0 with the coral line layout taken from carte-contact-bia-recto-verso.svg:
 //   recto: left vertical band + centred horizontal rule
-//   verso: top band + short rule under the heading
-// (positions adapted to v0's layout)
+//   verso: top band + short rule under the heading (restored to v0's y=42)
+// v2 = v1 with the recto title set to the contact card's "small" treatment
+//   (font-weight 700, letter-spacing 0.125em) instead of 900.
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -62,8 +63,8 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <use xlink:href="#assoc-w" x="6" y="6.5" width="16" height="13.55"/>
     <use xlink:href="#bia-w" x="59" y="8.5" width="20" height="7.55"/>
 
-    <text x="42.5" y="29" text-anchor="middle" font-size="3.8" font-weight="900"
-          fill="#ffffff" letter-spacing="0.5">COURS DU BIA À DISTANCE</text>
+    <text x="42.5" y="29" text-anchor="middle" font-size="3.8" font-weight="700"
+          fill="#ffffff" letter-spacing="0.475">COURS DU BIA À DISTANCE</text>
     <text x="42.5" y="34.5" text-anchor="middle" font-size="2.6" font-weight="700"
           fill="#f98780" letter-spacing="0.7">GRATUIT, POUR TOUS</text>
 
@@ -103,6 +104,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 </svg>
 `;
 
-const out = path.join(root, "assets/carte-visite-v1.svg");
+const out = path.join(root, "assets/carte-visite-v2.svg");
 fs.writeFileSync(out, svg);
 console.log(`wrote ${path.relative(root, out)} (${(Buffer.byteLength(svg) / 1024).toFixed(0)} KB)`);
