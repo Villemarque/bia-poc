@@ -1,4 +1,4 @@
-// Generates assets/carte-visite-v7.svg — a non-personal business card (recto +
+// Generates assets/carte-visite-v8.svg — a non-personal business card (recto +
 // verso, 85×55 mm each) in the charte-graphique style: the website header look
 // (navy + coral accent + uppercase tracked titles), both logos, and a link to
 // the site.
@@ -15,10 +15,12 @@
 //   (mercredi 17h30–19h30, samedi 10h–12h).
 // v6 = v5 with "Inscription : " added before the URL inside the recto CTA pill.
 // v7 = v6 with the CTA pill shrunk (53→43mm) to hug the text.
+// v8 = v7 with a QR code to the website, bottom-right on the verso.
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
 import path from "node:path";
+import QRCode from "qrcode";
 
 const root = process.cwd();
 const read = (p) => fs.readFileSync(path.join(root, p), "utf8");
@@ -46,6 +48,16 @@ const defs = [
   symbol("bia-d", "assets/bia.svg"),
   symbol("bia-w", "assets/bia.svg", "#ffffff"),
 ].join("\n    ");
+
+// QR code to the website (vector), placed bottom-right on the verso
+const qr = (
+  await QRCode.toString("https://asso-triple-a.org/", {
+    type: "svg",
+    margin: 2,
+    errorCorrectionLevel: "M",
+    color: { dark: "#000a33", light: "#00000000" },
+  })
+).replace("<svg ", '<svg x="66" y="37" width="15" height="15" ');
 
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -106,11 +118,14 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
       <text x="8" y="47.5" font-size="2.9" font-weight="700" fill="#e97770">asso-triple-a.org</text>
     </a>
     <text x="8" y="51.6" font-size="2.3" fill="#6e737a">contact@asso-triple-a.org</text>
+
+    <!-- QR code vers le site -->
+    ${qr}
   </g>
   <text x="105" y="73" font-size="2.6" fill="#989ba0">Verso — 85 × 55 mm</text>
 </svg>
 `;
 
-const out = path.join(root, "assets/carte-visite-v7.svg");
+const out = path.join(root, "assets/carte-visite-v8.svg");
 fs.writeFileSync(out, svg);
 console.log(`wrote ${path.relative(root, out)} (${(Buffer.byteLength(svg) / 1024).toFixed(0)} KB)`);
