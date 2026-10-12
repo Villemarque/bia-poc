@@ -3,7 +3,7 @@
      width="202mm" height="82mm" viewBox="0 0 202 82"
      font-family="'Source Sans Pro', system-ui, sans-serif">
   <title>Carte de visite — Aérien Ambassadeurs Avenir (Triple A)</title>
-  <desc>Recto et verso, 88 × 58 mm, sans encre de coupe. Reprend l'identité de l'en-tête du site (marine, accent corail, titres majuscules interlettrés).</desc>
+  <desc>Aperçu recto + verso, 88 × 58 mm chacun, sans encre de coupe.</desc>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900&amp;display=swap");
   </style>
@@ -48,10 +48,10 @@
   </g></symbol>
   </defs>
 
-  <!-- ===================== RECTO (en-tête) ===================== -->
+  <!-- ===================== RECTO ===================== -->
   <g transform="translate(6,6)">
     <rect width="88" height="58" fill="#000a33"/>
-    <!-- bande verticale gauche + filet horizontal centré (repris de la carte de contact) -->
+    <!-- bande verticale gauche + filet horizontal centré -->
     <rect width="1.2" height="58" fill="#e97770"/>
     <line x1="25.7" y1="40.5" x2="62.3" y2="40.5" stroke="#e97770" stroke-width="0.49"/>
 
@@ -72,10 +72,10 @@
   </g>
   <text x="6" y="73" font-size="2.6" fill="#989ba0">Recto — 88 × 58 mm</text>
 
-  <!-- ===================== VERSO (information) ===================== -->
+  <!-- ===================== VERSO ===================== -->
   <g transform="translate(108,6)">
     <rect width="88" height="58" fill="#ffffff" stroke="#e3e3e3" stroke-width="0.3"/>
-    <!-- bandeau supérieur (repris de la carte de contact) -->
+    <!-- bandeau supérieur -->
     <rect width="88" height="0.98" fill="#e97770"/>
 
     <use xlink:href="#assoc-d" x="8" y="6.5" width="14" height="11.86"/>
@@ -86,7 +86,7 @@
     <text x="8" y="32" font-size="2.8" fill="#6e737a"><tspan font-weight="700" fill="#484d55">Mercredi</tspan> : 17h30 – 19h30</text>
     <text x="8" y="37" font-size="2.8" fill="#6e737a"><tspan font-weight="700" fill="#484d55">Samedi</tspan> : 10h – 12h</text>
 
-    <!-- filet court (position d'origine v0) -->
+    <!-- filet court -->
     <rect x="8" y="42" width="12" height="0.5" fill="#e97770"/>
 
     <a xlink:href="https://asso-triple-a.org/" href="https://asso-triple-a.org/" target="_blank">
