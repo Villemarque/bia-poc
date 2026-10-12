@@ -42,8 +42,8 @@ keep new sections consistent with the existing ones when copying.
 A standalone brand guide (fonts, colours, tokens, logos — all inlined) lives at
 `charte-graphique.html`, regenerated with `node bin/build-charte.mjs`. Use it to
 produce external work that matches the style. A matching non-personal business
-card (recto + verso) is generated at `assets/carte-visite-v3.svg` by
-`node bin/build-carte.mjs` (the earlier `-v0` / `-v1` / `-v2` versions are kept alongside).
+card (recto + verso) is generated at `assets/carte-visite-v4.svg` by
+`node bin/build-carte.mjs` (the earlier `-v0` … `-v3` versions are kept alongside).
 
 ## Images
 
