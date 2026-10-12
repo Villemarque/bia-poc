@@ -1,4 +1,4 @@
-// Generates assets/carte-visite-v9.svg — a non-personal business card (recto +
+// Generates assets/carte-visite-v10.svg — a non-personal business card (recto +
 // verso, 85×55 mm each) in the charte-graphique style: the website header look
 // (navy + coral accent + uppercase tracked titles), both logos, and a link to
 // the site.
@@ -18,6 +18,8 @@
 // v8 = v7 with a QR code to the website, bottom-right on the verso.
 // v9 = v8 resized to 88 × 58 mm, with the recto title changed to "Cours de
 //   préparation au BIA à distance" (uppercase, wrapped on two lines).
+// v10 = v9 with the recto title rolled back to a single line:
+//   "Cours de BIA à distance".
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -84,10 +86,8 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <use xlink:href="#assoc-w" x="6" y="6.5" width="16" height="13.55"/>
     <use xlink:href="#bia-w" x="62" y="8.5" width="20" height="7.55"/>
 
-    <text x="44" y="25.5" text-anchor="middle" font-size="3.5" font-weight="700"
-          fill="#ffffff" letter-spacing="0.44">COURS DE PRÉPARATION</text>
-    <text x="44" y="30.5" text-anchor="middle" font-size="3.5" font-weight="700"
-          fill="#ffffff" letter-spacing="0.44">AU BIA À DISTANCE</text>
+    <text x="44" y="29" text-anchor="middle" font-size="3.8" font-weight="700"
+          fill="#ffffff" letter-spacing="0.475">COURS DE BIA À DISTANCE</text>
     <text x="44" y="34.5" text-anchor="middle" font-size="2.6" font-weight="700"
           fill="#f98780" letter-spacing="0.7">GRATUIT, POUR TOUS</text>
 
@@ -130,6 +130,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 </svg>
 `;
 
-const out = path.join(root, "assets/carte-visite-v9.svg");
+const out = path.join(root, "assets/carte-visite-v10.svg");
 fs.writeFileSync(out, svg);
 console.log(`wrote ${path.relative(root, out)} (${(Buffer.byteLength(svg) / 1024).toFixed(0)} KB)`);
