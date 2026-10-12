@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="196mm" height="80mm" viewBox="0 0 196 80"
+     width="202mm" height="82mm" viewBox="0 0 202 82"
      font-family="'Source Sans Pro', system-ui, sans-serif">
   <title>Carte de visite — Aérien Ambassadeurs Avenir (Triple A)</title>
-  <desc>Recto et verso, 85 × 55 mm, sans encre de coupe. Reprend l'identité de l'en-tête du site (marine, accent corail, titres majuscules interlettrés).</desc>
+  <desc>Recto et verso, 88 × 58 mm, sans encre de coupe. Reprend l'identité de l'en-tête du site (marine, accent corail, titres majuscules interlettrés).</desc>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900&amp;display=swap");
   </style>
@@ -50,38 +50,38 @@
 
   <!-- ===================== RECTO (en-tête) ===================== -->
   <g transform="translate(6,6)">
-    <rect width="85" height="55" fill="#000a33"/>
+    <rect width="88" height="58" fill="#000a33"/>
     <!-- bande verticale gauche + filet horizontal centré (repris de la carte de contact) -->
-    <rect width="1.16" height="55" fill="#e97770"/>
-    <line x1="24.2" y1="37.8" x2="60.8" y2="37.8" stroke="#e97770" stroke-width="0.49"/>
+    <rect width="1.2" height="58" fill="#e97770"/>
+    <line x1="25.7" y1="37.8" x2="62.3" y2="37.8" stroke="#e97770" stroke-width="0.49"/>
 
     <use xlink:href="#assoc-w" x="6" y="6.5" width="16" height="13.55"/>
-    <use xlink:href="#bia-w" x="59" y="8.5" width="20" height="7.55"/>
+    <use xlink:href="#bia-w" x="62" y="8.5" width="20" height="7.55"/>
 
-    <text x="42.5" y="25.5" text-anchor="middle" font-size="3.5" font-weight="700"
+    <text x="44" y="25.5" text-anchor="middle" font-size="3.5" font-weight="700"
           fill="#ffffff" letter-spacing="0.44">COURS DE PRÉPARATION</text>
-    <text x="42.5" y="30.5" text-anchor="middle" font-size="3.5" font-weight="700"
+    <text x="44" y="30.5" text-anchor="middle" font-size="3.5" font-weight="700"
           fill="#ffffff" letter-spacing="0.44">AU BIA À DISTANCE</text>
-    <text x="42.5" y="34.5" text-anchor="middle" font-size="2.6" font-weight="700"
+    <text x="44" y="34.5" text-anchor="middle" font-size="2.6" font-weight="700"
           fill="#f98780" letter-spacing="0.7">GRATUIT, POUR TOUS</text>
 
     <a xlink:href="https://asso-triple-a.org/" href="https://asso-triple-a.org/" target="_blank">
       <title>Site de l'association</title>
-      <rect x="21" y="41.5" width="43" height="5.4" rx="0.6" fill="none" stroke="#ffe484" stroke-width="0.35"/>
-      <text x="42.5" y="45.2" text-anchor="middle" font-size="2.7" font-weight="700"
+      <rect x="22.5" y="41.5" width="43" height="5.4" rx="0.6" fill="none" stroke="#ffe484" stroke-width="0.35"/>
+      <text x="44" y="45.2" text-anchor="middle" font-size="2.7" font-weight="700"
             fill="#ffe484" letter-spacing="0.15">Inscription : asso-triple-a.org</text>
     </a>
   </g>
-  <text x="6" y="73" font-size="2.6" fill="#989ba0">Recto — 85 × 55 mm</text>
+  <text x="6" y="73" font-size="2.6" fill="#989ba0">Recto — 88 × 58 mm</text>
 
   <!-- ===================== VERSO (information) ===================== -->
-  <g transform="translate(105,6)">
-    <rect width="85" height="55" fill="#ffffff" stroke="#e3e3e3" stroke-width="0.3"/>
+  <g transform="translate(108,6)">
+    <rect width="88" height="58" fill="#ffffff" stroke="#e3e3e3" stroke-width="0.3"/>
     <!-- bandeau supérieur (repris de la carte de contact) -->
-    <rect width="85" height="0.98" fill="#e97770"/>
+    <rect width="88" height="0.98" fill="#e97770"/>
 
     <use xlink:href="#assoc-d" x="8" y="6.5" width="14" height="11.86"/>
-    <use xlink:href="#bia-d" x="59" y="9" width="20" height="7.55"/>
+    <use xlink:href="#bia-d" x="62" y="9" width="20" height="7.55"/>
 
     <text x="8" y="26" font-size="3.9" font-weight="700" fill="#484d55">Aérien Ambassadeurs Avenir <tspan fill="#989ba0" font-size="3.4">« Triple A »</tspan></text>
     <!-- créneaux hebdomadaires -->
@@ -98,8 +98,8 @@
     <text x="8" y="51.6" font-size="2.3" fill="#6e737a">contact@asso-triple-a.org</text>
 
     <!-- QR code vers le site -->
-    <svg x="66" y="37" width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges"><path stroke="#000a33" d="M2 2.5h7m1 0h1m1 0h1m3 0h1m3 0h7M2 3.5h1m5 0h1m1 0h1m1 0h2m1 0h1m4 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h6m1 0h2m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m2 0h1m1 0h3m4 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m5 0h1m1 0h1m3 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 9.5h4M2 10.5h1m2 0h9m4 0h2m2 0h1m1 0h3M2 11.5h1m1 0h2m4 0h2m1 0h5m1 0h1m1 0h5M3 12.5h1m3 0h4m1 0h2m3 0h1m1 0h5m2 0h1M3 13.5h2m1 0h1m2 0h2m1 0h3m1 0h3m4 0h4M2 14.5h1m2 0h1m1 0h2m2 0h1m2 0h1m2 0h1m2 0h2m4 0h1M2 15.5h1m3 0h1m3 0h1m3 0h6m2 0h1m2 0h1M2 16.5h2m1 0h1m1 0h2m6 0h1m1 0h2m1 0h1m1 0h5M2 17.5h1m1 0h1m1 0h1m2 0h2m2 0h1m5 0h1m1 0h1m1 0h2m1 0h1M2 18.5h1m2 0h4m2 0h2m1 0h9m1 0h2M10 19.5h1m3 0h2m1 0h2m3 0h1m1 0h2M2 20.5h7m1 0h1m2 0h1m4 0h1m1 0h1m1 0h1m3 0h1M2 21.5h1m5 0h1m1 0h1m2 0h1m1 0h4m3 0h1M2 22.5h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h7M2 23.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h6m4 0h2M2 24.5h1m1 0h3m1 0h1m2 0h5m2 0h2m2 0h5M2 25.5h1m5 0h1m3 0h1m1 0h1m1 0h1m4 0h2m1 0h3M2 26.5h7m1 0h1m2 0h1m3 0h2m4 0h1m2 0h1"/></svg>
+    <svg x="69" y="37" width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges"><path stroke="#000a33" d="M2 2.5h7m1 0h1m1 0h1m3 0h1m3 0h7M2 3.5h1m5 0h1m1 0h1m1 0h2m1 0h1m4 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h6m1 0h2m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m2 0h1m1 0h3m4 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m5 0h1m1 0h1m3 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 9.5h4M2 10.5h1m2 0h9m4 0h2m2 0h1m1 0h3M2 11.5h1m1 0h2m4 0h2m1 0h5m1 0h1m1 0h5M3 12.5h1m3 0h4m1 0h2m3 0h1m1 0h5m2 0h1M3 13.5h2m1 0h1m2 0h2m1 0h3m1 0h3m4 0h4M2 14.5h1m2 0h1m1 0h2m2 0h1m2 0h1m2 0h1m2 0h2m4 0h1M2 15.5h1m3 0h1m3 0h1m3 0h6m2 0h1m2 0h1M2 16.5h2m1 0h1m1 0h2m6 0h1m1 0h2m1 0h1m1 0h5M2 17.5h1m1 0h1m1 0h1m2 0h2m2 0h1m5 0h1m1 0h1m1 0h2m1 0h1M2 18.5h1m2 0h4m2 0h2m1 0h9m1 0h2M10 19.5h1m3 0h2m1 0h2m3 0h1m1 0h2M2 20.5h7m1 0h1m2 0h1m4 0h1m1 0h1m1 0h1m3 0h1M2 21.5h1m5 0h1m1 0h1m2 0h1m1 0h4m3 0h1M2 22.5h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h7M2 23.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h6m4 0h2M2 24.5h1m1 0h3m1 0h1m2 0h5m2 0h2m2 0h5M2 25.5h1m5 0h1m3 0h1m1 0h1m1 0h1m4 0h2m1 0h3M2 26.5h7m1 0h1m2 0h1m3 0h2m4 0h1m2 0h1"/></svg>
 
   </g>
-  <text x="105" y="73" font-size="2.6" fill="#989ba0">Verso — 85 × 55 mm</text>
+  <text x="108" y="73" font-size="2.6" fill="#989ba0">Verso — 88 × 58 mm</text>
 </svg>
