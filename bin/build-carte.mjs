@@ -1,4 +1,4 @@
-// Generates assets/carte-visite-v6.svg — a non-personal business card (recto +
+// Generates assets/carte-visite-v7.svg — a non-personal business card (recto +
 // verso, 85×55 mm each) in the charte-graphique style: the website header look
 // (navy + coral accent + uppercase tracked titles), both logos, and a link to
 // the site.
@@ -14,6 +14,7 @@
 // v5 = v4 with the verso description replaced by the two weekly schedules
 //   (mercredi 17h30–19h30, samedi 10h–12h).
 // v6 = v5 with "Inscription : " added before the URL inside the recto CTA pill.
+// v7 = v6 with the CTA pill shrunk (53→43mm) to hug the text.
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -76,7 +77,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 
     <a xlink:href="https://asso-triple-a.org/" href="https://asso-triple-a.org/" target="_blank">
       <title>Site de l'association</title>
-      <rect x="16" y="41.5" width="53" height="5.4" rx="0.6" fill="none" stroke="#ffe484" stroke-width="0.35"/>
+      <rect x="21" y="41.5" width="43" height="5.4" rx="0.6" fill="none" stroke="#ffe484" stroke-width="0.35"/>
       <text x="42.5" y="45.2" text-anchor="middle" font-size="2.7" font-weight="700"
             fill="#ffe484" letter-spacing="0.15">Inscription : asso-triple-a.org</text>
     </a>
@@ -110,6 +111,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 </svg>
 `;
 
-const out = path.join(root, "assets/carte-visite-v6.svg");
+const out = path.join(root, "assets/carte-visite-v7.svg");
 fs.writeFileSync(out, svg);
 console.log(`wrote ${path.relative(root, out)} (${(Buffer.byteLength(svg) / 1024).toFixed(0)} KB)`);
