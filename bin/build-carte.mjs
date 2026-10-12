@@ -1,4 +1,4 @@
-// Generates assets/carte-visite-v2.svg — a non-personal business card (recto +
+// Generates assets/carte-visite-v3.svg — a non-personal business card (recto +
 // verso, 85×55 mm each) in the charte-graphique style: the website header look
 // (navy + coral accent + uppercase tracked titles), both logos, and a link to
 // the site.
@@ -8,6 +8,8 @@
 //   verso: top band + short rule under the heading (restored to v0's y=42)
 // v2 = v1 with the recto title set to the contact card's "small" treatment
 //   (font-weight 700, letter-spacing 0.125em) instead of 900.
+// v3 = v2 with "« Triple A »" appended to the verso heading, in the contact
+//   card's light grey (#6e737a).
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -86,7 +88,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <use xlink:href="#assoc-d" x="8" y="6.5" width="14" height="11.86"/>
     <use xlink:href="#bia-d" x="59" y="9" width="20" height="7.55"/>
 
-    <text x="8" y="26" font-size="3.9" font-weight="700" fill="#484d55">Aérien Ambassadeurs Avenir</text>
+    <text x="8" y="26" font-size="3.9" font-weight="700" fill="#484d55">Aérien Ambassadeurs Avenir <tspan fill="#6e737a" font-size="3.4">« Triple A »</tspan></text>
     <text x="8" y="30.5" font-size="2.5" fill="#6e737a">Association « Triple A » — Préparation au BIA</text>
     <text x="8" y="34.5" font-size="2.5" fill="#6e737a">Cours à distance, gratuits et ouverts à tous.</text>
     <text x="8" y="38.5" font-size="2.5" fill="#6e737a">Brevet d’Initiation Aéronautique.</text>
@@ -104,6 +106,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 </svg>
 `;
 
-const out = path.join(root, "assets/carte-visite-v2.svg");
+const out = path.join(root, "assets/carte-visite-v3.svg");
 fs.writeFileSync(out, svg);
 console.log(`wrote ${path.relative(root, out)} (${(Buffer.byteLength(svg) / 1024).toFixed(0)} KB)`);
