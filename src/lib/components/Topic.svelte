@@ -23,7 +23,7 @@
 	}
 
 	.highlight h3 {
-		color: #e97770;
+		color: var(--color-accent);
 		margin: 0 0 0.75em 0;
 		font-size: 1.15em;
 		letter-spacing: 0.05em;

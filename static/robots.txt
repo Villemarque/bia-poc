@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asso-triple-a.org/sitemap.xml

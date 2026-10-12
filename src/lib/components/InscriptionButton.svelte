@@ -36,7 +36,7 @@
 	}
 
 	.button {
-		transition: all 0.25s ease-in-out;
+		transition: all var(--transition);
 		display: inline-block;
 		background: #444;
 		text-align: center;
@@ -56,7 +56,7 @@
 	}
 
 	.button:hover {
-		background-color: #f98780;
+		background-color: var(--color-accent-hover);
 	}
 
 	.button.large {
@@ -65,16 +65,16 @@
 	}
 
 	.button.style1 {
-		background: #e97770;
+		background: var(--color-accent);
 		color: #fff;
 	}
 
 	.button.style1:hover {
-		background-color: #f98780;
+		background-color: var(--color-accent-hover);
 	}
 
 	.button.style1:active {
-		background-color: #d96760;
+		background-color: var(--color-accent-active);
 	}
 
 	ul.actions.in-features {

@@ -5,6 +5,23 @@
 {@render children()}
 
 <style>
+	/* Design tokens (H1): single source for the shared palette + timing.
+	   Values are identical to the literals they replace. */
+	:global(:root) {
+		--color-accent: #e97770;
+		--color-accent-hover: #f98780;
+		--color-accent-active: #d96760;
+		--color-ink: #777b80;
+		--color-ink-muted: #73777c;
+		--color-ink-faint: #989ba0;
+		--color-heading: #484d55;
+		--color-link: #717479;
+		--color-nav: #000a33;
+		--color-icon-circle: #2f333b;
+		--color-footer: #282b34;
+		--transition: 0.25s ease-in-out;
+	}
+
 	:global(html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, output, ruby, section, summary, time, mark, audio, video) {
 		margin: 0;
 		padding: 0;
@@ -72,7 +89,7 @@
 	:global(body, input, textarea, select) {
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 400;
-		color: #777b80;
+		color: var(--color-ink);
 		font-size: 14pt;
 		line-height: 1.75em;
 		letter-spacing: 0.025em;
@@ -80,7 +97,7 @@
 
 	:global(h1, h2, h3, h4, h5, h6) {
 		font-weight: 700;
-		color: #484d55;
+		color: var(--color-heading);
 	}
 
 	:global(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
@@ -89,9 +106,9 @@
 	}
 
 	:global(a) {
-		transition: color 0.25s ease-in-out;
+		transition: color var(--transition);
 		text-decoration: underline;
-		color: #717479;
+		color: var(--color-link);
 	}
 
 	:global(a:hover) {
@@ -100,7 +117,7 @@
 
 	:global(strong), :global(b) {
 		font-weight: 700;
-		color: #484d55;
+		color: var(--color-heading);
 	}
 
 	:global(blockquote) {
@@ -195,7 +212,7 @@
 
 	/* Visible keyboard focus (A1) */
 	:global(:focus-visible) {
-		outline: 2px solid #e97770;
+		outline: 2px solid var(--color-accent);
 		outline-offset: 2px;
 	}
 

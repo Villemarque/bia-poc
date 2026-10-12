@@ -42,7 +42,7 @@
 					encarts "Pour aller plus loin" pour les plus avertis
 				</li>
 				<li>
-					Nous avons eu à coeur de distiller du contenu environnemental dans nos cours : nous
+					Nous avons eu à cœur de distiller du contenu environnemental dans nos cours : nous
 					évoquons en toute transparence l'impact environnemental de l'aérien et du spatial tout
 					en soulignant les solutions déjà mises en place ainsi que les perspectives futures
 				</li>
@@ -100,7 +100,7 @@
 		margin-left: -12.5em;
 		padding-top: 0.5em;
 		background: #fff;
-		color: #484d55;
+		color: var(--color-heading);
 	}
 
 	.title:before {
@@ -146,7 +146,7 @@
 	}
 
 	header.style1 p {
-		color: #73777c;
+		color: var(--color-ink-muted);
 		display: block;
 		margin: 1.15em 0 0 0;
 		font-size: 1.3em;
@@ -182,7 +182,7 @@
 	}
 
 	.feature-list h3 {
-		color: #e97770 !important;
+		color: var(--color-accent) !important;
 		margin: -0.35em 0 0.75em 0;
 		font-size: 1.15em;
 		letter-spacing: 0.05em;
@@ -191,7 +191,7 @@
 	.feature-list h3:before {
 		display: block;
 		color: #fff;
-		background: #2f333b;
+		background: var(--color-icon-circle);
 		border-radius: 2.5em;
 		text-align: center;
 		width: 2.5em;
