@@ -8,15 +8,33 @@
 </script>
 
 <div id="page-wrapper">
+	<a class="skip-link" href="#content">Aller au contenu</a>
 	<Nav />
-	<Header />
-	<Highlights />
-	<Features />
-	<Intro />
+	<main id="content">
+		<Header />
+		<Highlights />
+		<Features />
+		<Intro />
+	</main>
 	<Footer />
 </div>
 
 <style>
+	.skip-link {
+		position: absolute;
+		top: 0;
+		left: -9999px;
+		z-index: 2000;
+		padding: 0.75em 1.25em;
+		background: #000a33;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.skip-link:focus {
+		left: 0;
+	}
+
 	@media (max-width: 979.29px) {
 		#page-wrapper {
 			backface-visibility: hidden;

@@ -10,6 +10,8 @@
 		class="image featured"
 		alt=""
 		sizes="(max-width: 979.29px) 100vw, 320px"
+		loading="lazy"
+		decoding="async"
 	/>
 	<h3>{title}</h3>
 	<p>{description}</p>

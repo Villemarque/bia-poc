@@ -1,22 +1,52 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import { inscriptionLink, inscriptionLabel } from "#lib/config.js";
+
+	let active = $state("");
+
+	onMount(() => {
+		const sections = ["header", "highlights", "features", "intro", "footer"]
+			.map((id) => document.getElementById(id))
+			.filter((el): el is HTMLElement => !!el);
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) {
+						// the hero maps back to "no section active" (Accueil)
+						active = entry.target.id === "header" ? "" : entry.target.id;
+					}
+				}
+			},
+			{ rootMargin: "-45% 0px -50% 0px" },
+		);
+		for (const section of sections) observer.observe(section);
+		return () => observer.disconnect();
+	});
 </script>
 
-<div id="nav">
-	<!-- svelte-ignore a11y_invalid_attribute -->
-	<a href="#"><img src="/images/logo-white.svg" alt="logo" class="nav-logo" /></a>
+<nav id="nav" aria-label="Navigation principale">
+	<a href="#page-wrapper" aria-label="Retour en haut"
+		><img src="/images/logo-white.svg" alt="" class="nav-logo" /></a
+	>
 	<ul class="nav-list">
 		<li class="nav-not-essential nav-item">
-			<!-- svelte-ignore a11y_invalid_attribute -->
-			<a href="#">Accueil</a>
+			<a href="#page-wrapper" class:active={active === ""}>Accueil</a>
 		</li>
-		<li class="nav-item"><a href="#highlights">Le BIA</a></li>
-		<li class="nav-item"><a href="#features">Les cours</a></li>
-		<li class="nav-not-essential nav-item"><a href="#intro">Nous connaitre</a></li>
-		<li class="nav-not-essential nav-item"><a href="#footer">Devenir volontaire</a></li>
+		<li class="nav-item">
+			<a href="#highlights" class:active={active === "highlights"}>Le BIA</a>
+		</li>
+		<li class="nav-item">
+			<a href="#features" class:active={active === "features"}>Les cours</a>
+		</li>
+		<li class="nav-not-essential nav-item">
+			<a href="#intro" class:active={active === "intro"}>Nous connaitre</a>
+		</li>
+		<li class="nav-not-essential nav-item">
+			<a href="#footer" class:active={active === "footer"}>Devenir volontaire</a>
+		</li>
 	</ul>
 	<a class="nav-inscription-link" href={inscriptionLink}>{inscriptionLabel}</a>
-</div>
+</nav>
 
 <style>
 	#nav {
@@ -66,6 +96,7 @@
 		font-size: 16px;
 	}
 
+	.nav-item > a.active,
 	.nav-item:hover > a {
 		color: #fff;
 	}
@@ -90,6 +121,22 @@
 	.nav-inscription-link:hover {
 		color: var(--nav-dark-blue);
 		background-color: var(--nav-yellow);
+	}
+
+	.nav-inscription-link:active {
+		background-color: #e6c94f;
+	}
+
+	/* Larger tap targets on touch devices (B2) */
+	@media (pointer: coarse) {
+		.nav-item {
+			padding: 0.75rem 1.15rem;
+		}
+
+		.nav-item > a {
+			display: inline-block;
+			padding: 0.375rem 0;
+		}
 	}
 
 	@media (max-width: 979.29px) {

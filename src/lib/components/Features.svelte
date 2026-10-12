@@ -13,6 +13,8 @@
 				src={laptopThrottle}
 				alt=""
 				sizes="(max-width: 979.29px) 100vw, 1120px"
+				loading="lazy"
+				decoding="async"
 			/></div
 		>
 		<section id="features">
@@ -144,7 +146,7 @@
 	}
 
 	header.style1 p {
-		color: #989ba0;
+		color: #73777c;
 		display: block;
 		margin: 1.15em 0 0 0;
 		font-size: 1.3em;

@@ -2,7 +2,7 @@
 	import { contactMail } from "#lib/config.js";
 </script>
 
-<section id="footer" class="wrapper">
+<footer id="footer" class="wrapper">
 	<div class="title">Devenir volontaire</div>
 	<div class="container">
 		<header class="style1">
@@ -43,7 +43,7 @@
 			>
 		</div>
 	</div>
-</section>
+</footer>
 
 <style>
 	#footer {

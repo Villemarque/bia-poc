@@ -43,6 +43,18 @@ served from `static/images/ia-runway.webp` is regenerated from it with:
 cwebp -q 82 src/lib/assets/images/ia-runway.png -o static/images/ia-runway.webp
 ```
 
+## Fonts
+
+Source Sans Pro is self-hosted (no third-party font request). The woff2 subsets
+and `static/fonts/source-sans-pro.css` are generated with:
+
+```sh
+node bin/self-host-fonts.mjs
+```
+
+It pulls the `latin` + `latin-ext` subsets (weights 400 / 400 italic / 700 /
+900) and sets `font-display: swap`. The main face is preloaded in `app.html`.
+
 ## Visual regression (pics.ts)
 
 `pics.ts` takes screenshots of the page at 4 widths and compares them against

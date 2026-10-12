@@ -192,4 +192,26 @@
 			display: none;
 		}
 	}
+
+	/* Visible keyboard focus (A1) */
+	:global(:focus-visible) {
+		outline: 2px solid #e97770;
+		outline-offset: 2px;
+	}
+
+	/* Offset in-page anchors under the fixed nav (B1) + smooth scrolling (C2) */
+	:global(html) {
+		scroll-padding-top: 4em;
+		scroll-behavior: smooth;
+	}
+
+	/* Respect reduced-motion (A5) */
+	@media (prefers-reduced-motion: reduce) {
+		:global(*) {
+			scroll-behavior: auto !important;
+			transition-duration: 0.01ms !important;
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+		}
+	}
 </style>
