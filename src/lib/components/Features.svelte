@@ -5,7 +5,7 @@
 </script>
 
 <section id="main" class="wrapper style2">
-	<div class="title">Les cours</div>
+	<h2 class="title">Les cours</h2>
 	<div class="container">
 		<div class="image featured"
 			><enhanced:img

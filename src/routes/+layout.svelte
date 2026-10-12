@@ -11,7 +11,7 @@
 		--color-accent: #e97770;
 		--color-accent-hover: #f98780;
 		--color-accent-active: #d96760;
-		--color-ink: #777b80;
+		--color-ink: #6e737a;
 		--color-ink-muted: #73777c;
 		--color-ink-faint: #989ba0;
 		--color-heading: #484d55;

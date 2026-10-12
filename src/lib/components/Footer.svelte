@@ -3,7 +3,7 @@
 </script>
 
 <footer id="footer" class="wrapper">
-	<div class="title">Devenir volontaire</div>
+	<h2 class="title">Devenir volontaire</h2>
 	<div class="container">
 		<header class="style1">
 			<h2>Envie de devenir professeur bénévole ?</h2>

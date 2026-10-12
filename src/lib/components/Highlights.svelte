@@ -5,7 +5,7 @@
 </script>
 
 <section id="highlights" class="wrapper style3">
-	<div class="title">Le BIA</div>
+	<h2 class="title">Le BIA</h2>
 	<div class="container">
 		<p class="style1">
 			Le <strong>Brevet d’Initiation Aéronautique</strong> (BIA) est :

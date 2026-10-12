@@ -3,7 +3,7 @@
 </script>
 
 <section id="intro" class="wrapper style1">
-	<div class="title">Nous connaître</div>
+	<h2 class="title">Nous connaître</h2>
 	<div class="container">
 		<p class="style3">
 			Créée en décembre 2020,
