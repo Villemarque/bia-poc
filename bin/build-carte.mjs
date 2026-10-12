@@ -1,7 +1,12 @@
-// Generates assets/carte-visite.svg — a non-personal business card (recto +
+// Generates assets/carte-visite-v1.svg — a non-personal business card (recto +
 // verso, 85×55 mm each) in the charte-graphique style: the website header look
 // (navy + coral accent + uppercase tracked titles), both logos, and a link to
 // the site.
+//
+// v1 = v0 with the coral line layout taken from carte-contact-bia-recto-verso.svg:
+//   recto: left vertical band + centred horizontal rule
+//   verso: top band + short rule under the heading
+// (positions adapted to v0's layout)
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -50,8 +55,9 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <!-- ===================== RECTO (en-tête) ===================== -->
   <g transform="translate(6,6)">
     <rect width="85" height="55" fill="#000a33"/>
-    <rect width="85" height="2" fill="#e97770"/>
-    <rect y="53" width="85" height="2" fill="#e97770"/>
+    <!-- bande verticale gauche + filet horizontal centré (repris de la carte de contact) -->
+    <rect width="1.16" height="55" fill="#e97770"/>
+    <line x1="24.2" y1="37.8" x2="60.8" y2="37.8" stroke="#e97770" stroke-width="0.49"/>
 
     <use xlink:href="#assoc-w" x="6" y="6.5" width="16" height="13.55"/>
     <use xlink:href="#bia-w" x="59" y="8.5" width="20" height="7.55"/>
@@ -73,7 +79,8 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <!-- ===================== VERSO (information) ===================== -->
   <g transform="translate(105,6)">
     <rect width="85" height="55" fill="#ffffff" stroke="#e3e3e3" stroke-width="0.3"/>
-    <rect width="2.5" height="55" fill="#e97770"/>
+    <!-- bandeau supérieur (repris de la carte de contact) -->
+    <rect width="85" height="0.98" fill="#e97770"/>
 
     <use xlink:href="#assoc-d" x="8" y="6.5" width="14" height="11.86"/>
     <use xlink:href="#bia-d" x="59" y="9" width="20" height="7.55"/>
@@ -83,7 +90,8 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <text x="8" y="34.5" font-size="2.5" fill="#6e737a">Cours à distance, gratuits et ouverts à tous.</text>
     <text x="8" y="38.5" font-size="2.5" fill="#6e737a">Brevet d’Initiation Aéronautique.</text>
 
-    <rect x="8" y="42" width="12" height="0.5" fill="#e97770"/>
+    <!-- filet court sous le titre (repris de la carte de contact) -->
+    <rect x="8" y="28.2" width="7.34" height="0.49" fill="#e97770"/>
 
     <a xlink:href="https://asso-triple-a.org/" href="https://asso-triple-a.org/" target="_blank">
       <title>Site de l'association</title>
@@ -95,6 +103,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 </svg>
 `;
 
-const out = path.join(root, "assets/carte-visite.svg");
+const out = path.join(root, "assets/carte-visite-v1.svg");
 fs.writeFileSync(out, svg);
 console.log(`wrote ${path.relative(root, out)} (${(Buffer.byteLength(svg) / 1024).toFixed(0)} KB)`);
