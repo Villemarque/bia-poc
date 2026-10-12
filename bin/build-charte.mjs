@@ -9,14 +9,7 @@ import path from "node:path";
 const root = process.cwd();
 const read = (p) => fs.readFileSync(path.join(root, p), "utf8");
 
-// ---- fonts: inline the woff2 subsets as base64 data URIs --------------------
-let fontCss = read("static/fonts/source-sans-pro.css").replace(
-  /url\("\/fonts\/([^"]+)"\)/g,
-  (_, name) =>
-    `url("data:font/woff2;base64,${fs
-      .readFileSync(path.join(root, "static/fonts", name))
-      .toString("base64")}")`,
-);
+// ---- fonts: referenced by name via the Google Fonts API (not embedded) ------
 
 // ---- logos: inline the SVG markup -------------------------------------------
 const svg = (p) =>
@@ -67,9 +60,14 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+  rel="stylesheet"
+/>
 <title>Charte graphique — BIA · Aérien Ambassadeurs Avenir (Triple A)</title>
 <style>
-${fontCss}
 :root {
   --color-accent: #e97770;
   --color-accent-hover: #f98780;
@@ -398,9 +396,10 @@ footer.doc { background: var(--color-footer); color: rgba(255,255,255,0.7); padd
   --color-footer: #282b34;
   --transition: 0.25s ease-in-out;
 }</pre>
-    <p><small class="note">Polices : Source Sans Pro (400, 400i, 700, 900), subsets latin + latin-ext,
-    incluses dans ce fichier en base64. Logos : <code>static/images/logo.svg</code> et
-    <code>logo-white.svg</code>, reproduits ci-dessus en vectoriel.</small></p>
+    <p><small class="note">Police : <strong>Source Sans Pro</strong> (400, 400i, 700, 900),
+    chargée via l’API Google Fonts (voir l’en-tête du document). Logos :
+    <code>static/images/logo.svg</code> et <code>logo-white.svg</code>, reproduits ci-dessus en
+    vectoriel.</small></p>
   </section>
 
 </div>
