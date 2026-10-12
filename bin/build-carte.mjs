@@ -1,4 +1,4 @@
-// Generates assets/carte-visite-v10.svg — a non-personal business card (recto +
+// Generates assets/carte-visite-v11.svg — a non-personal business card (recto +
 // verso, 85×55 mm each) in the charte-graphique style: the website header look
 // (navy + coral accent + uppercase tracked titles), both logos, and a link to
 // the site.
@@ -20,6 +20,7 @@
 //   préparation au BIA à distance" (uppercase, wrapped on two lines).
 // v10 = v9 with the recto title rolled back to a single line:
 //   "Cours de BIA à distance".
+// v11 = v10 with a bit more vertical spacing on the recto (taller face).
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -81,20 +82,20 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
     <rect width="88" height="58" fill="#000a33"/>
     <!-- bande verticale gauche + filet horizontal centré (repris de la carte de contact) -->
     <rect width="1.2" height="58" fill="#e97770"/>
-    <line x1="25.7" y1="37.8" x2="62.3" y2="37.8" stroke="#e97770" stroke-width="0.49"/>
+    <line x1="25.7" y1="40.5" x2="62.3" y2="40.5" stroke="#e97770" stroke-width="0.49"/>
 
-    <use xlink:href="#assoc-w" x="6" y="6.5" width="16" height="13.55"/>
-    <use xlink:href="#bia-w" x="62" y="8.5" width="20" height="7.55"/>
+    <use xlink:href="#assoc-w" x="6" y="7" width="16" height="13.55"/>
+    <use xlink:href="#bia-w" x="62" y="9" width="20" height="7.55"/>
 
-    <text x="44" y="29" text-anchor="middle" font-size="3.8" font-weight="700"
+    <text x="44" y="30.5" text-anchor="middle" font-size="3.8" font-weight="700"
           fill="#ffffff" letter-spacing="0.475">COURS DE BIA À DISTANCE</text>
-    <text x="44" y="34.5" text-anchor="middle" font-size="2.6" font-weight="700"
+    <text x="44" y="36.5" text-anchor="middle" font-size="2.6" font-weight="700"
           fill="#f98780" letter-spacing="0.7">GRATUIT, POUR TOUS</text>
 
     <a xlink:href="https://asso-triple-a.org/" href="https://asso-triple-a.org/" target="_blank">
       <title>Site de l'association</title>
-      <rect x="22.5" y="41.5" width="43" height="5.4" rx="0.6" fill="none" stroke="#ffe484" stroke-width="0.35"/>
-      <text x="44" y="45.2" text-anchor="middle" font-size="2.7" font-weight="700"
+      <rect x="22.5" y="45" width="43" height="5.4" rx="0.6" fill="none" stroke="#ffe484" stroke-width="0.35"/>
+      <text x="44" y="48.7" text-anchor="middle" font-size="2.7" font-weight="700"
             fill="#ffe484" letter-spacing="0.15">Inscription : asso-triple-a.org</text>
     </a>
   </g>
@@ -130,6 +131,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 </svg>
 `;
 
-const out = path.join(root, "assets/carte-visite-v10.svg");
+const out = path.join(root, "assets/carte-visite-v11.svg");
 fs.writeFileSync(out, svg);
 console.log(`wrote ${path.relative(root, out)} (${(Buffer.byteLength(svg) / 1024).toFixed(0)} KB)`);
