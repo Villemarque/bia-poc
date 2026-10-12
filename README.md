@@ -39,6 +39,10 @@ Some section primitives (`.wrapper`, `.title`, `.container`, `.row`, `.icon`) ar
 intentionally duplicated per component (scoped) rather than hoisted globally;
 keep new sections consistent with the existing ones when copying.
 
+A standalone brand guide (fonts, colours, tokens, logos — all inlined) lives at
+`charte-graphique.html`, regenerated with `node bin/build-charte.mjs`. Use it to
+produce external work that matches the style.
+
 ## Images
 
 Raster photos are optimized at build time with
