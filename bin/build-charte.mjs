@@ -20,6 +20,7 @@ const svg = (p) =>
     .trim();
 const logo = svg("static/images/logo.svg"); // for light backgrounds
 const logoWhite = svg("static/images/logo-white.svg"); // for dark backgrounds
+const bia = svg("static/images/bia.svg"); // black BIA wordmark (invert for dark)
 
 // ---- palette ----------------------------------------------------------------
 const colors = [
@@ -127,10 +128,14 @@ small.note { color: var(--color-ink-muted); }
 .hero p { text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-ink-muted); margin: 0; }
 
 /* logos */
-.logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
-.logo-card { border: 1px solid #eee; border-radius: 0.35em; padding: 2rem; display: flex; align-items: center; justify-content: center; }
+.logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+.logo-card { margin: 0; border: 1px solid #eee; border-radius: 0.35em; padding: 2rem 2rem 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .logo-card.on-dark { background: var(--color-nav); }
-.logo-card svg { width: 100%; max-width: 220px; height: auto; display: block; }
+.logo-card .lg { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 80px; }
+.logo-card svg { width: 100%; max-width: 240px; height: auto; display: block; }
+.logo-card figcaption { margin-top: 1rem; font-size: 0.8rem; color: var(--color-ink-muted); }
+.logo-card.on-dark figcaption { color: rgba(255, 255, 255, 0.7); }
+.bia-invert svg { filter: invert(1); }
 .logo-badge { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 2.5em; background: var(--color-icon-circle); color: #fff; }
 
 /* swatches */
@@ -233,16 +238,19 @@ footer.doc { background: var(--color-footer); color: rgba(255,255,255,0.7); padd
   </section>
 
   <section id="logo">
-    <h2 class="sec">Logo<span>Logotype</span></h2>
+    <h2 class="sec">Logo<span>Logotypes</span></h2>
     <div class="logo-grid">
-      <div class="logo-card">${logo}</div>
-      <div class="logo-card on-dark">${logoWhite}</div>
+      <figure class="logo-card"><span class="lg">${logo}</span><figcaption>Association — fond clair</figcaption></figure>
+      <figure class="logo-card on-dark"><span class="lg">${logoWhite}</span><figcaption>Association — fond sombre</figcaption></figure>
+      <figure class="logo-card"><span class="lg">${bia}</span><figcaption>BIA — fond clair</figcaption></figure>
+      <figure class="logo-card on-dark bia-invert"><span class="lg">${bia}</span><figcaption>BIA — fond sombre (inversé)</figcaption></figure>
     </div>
     <h3>Règles d’usage</h3>
     <ul>
-      <li>Version foncée (<code>logo.svg</code>) sur fonds clairs ; version blanche (<code>logo-white.svg</code>) sur fonds sombres ou photographiques.</li>
+      <li>Logo de l’association : <code>logo.svg</code> sur fonds clairs, <code>logo-white.svg</code> sur fonds sombres ou photographiques.</li>
+      <li>Logotype « BIA » (<code>bia.svg</code>) pour évoquer le brevet : noir sur fond clair, inversé en blanc sur fond sombre.</li>
       <li>Respecter une marge de sécurité équivalente à la hauteur du « T » du monogramme sur tout le pourtour.</li>
-      <li>Ne pas déformer, incliner, ombrer, ni recolorer le logo ; ne pas le poser sur un fond peu contrasté.</li>
+      <li>Ne pas déformer, incliner, ombrer, ni recolorer les logos ; ne pas les poser sur un fond peu contrasté.</li>
       <li>Taille minimale à l’écran : 2,2 rem de hauteur ; sur le site, <code>object-fit: contain</code>.</li>
     </ul>
   </section>
