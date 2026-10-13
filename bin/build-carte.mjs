@@ -25,6 +25,9 @@
 // v12 = v11 recto title → "Préparation au BIA à distance"
 // v13 = v12 with the 88×58 card split into: bg → full card, content → centred
 //   85×55; preview gains a debug border; recto/verso exports → print/
+// v14 = v13 with the coral edge bands extended into the bleed so they stay
+//   visible (recto left band 1.2 mm, verso top band 0.98 mm) inside the
+//   trimmed 85×55 area
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -78,12 +81,14 @@ const qr = (
 
 // ---- background (runs to the full 88×58 card edges) ------------------------
 const rectoBg = `    <rect width="88" height="58" fill="#000a33"/>
-    <!-- bande verticale gauche (fond, jusqu'au bord) -->
-    <rect width="1.2" height="58" fill="#e97770"/>`;
+    <!-- bande verticale gauche : prolongée dans le fond perdu pour rester
+         visible (1,2 mm) dans la zone rognée 85×55 centrée -->
+    <rect width="2.7" height="58" fill="#e97770"/>`;
 
 const versoBg = `    <rect width="88" height="58" fill="#ffffff"/>
-    <!-- bandeau supérieur (fond, jusqu'au bord) -->
-    <rect width="88" height="0.98" fill="#e97770"/>`;
+    <!-- bandeau supérieur : prolongé dans le fond perdu pour rester visible
+         (0,98 mm) dans la zone rognée 85×55 centrée -->
+    <rect width="88" height="2.48" fill="#e97770"/>`;
 
 // ---- content (centred 85×55 coordinate space) ------------------------------
 const rectoContent = `    <!-- filet horizontal centré -->
@@ -186,7 +191,7 @@ ${content}
 `;
 
 const outputs = {
-  "assets/carte-visite-v13.svg": preview,
+  "assets/carte-visite-v14.svg": preview,
   "print/carte-visite-recto.svg": face("Recto", rectoBg, rectoContent),
   "print/carte-visite-verso.svg": face("Verso", versoBg, versoContent),
 };

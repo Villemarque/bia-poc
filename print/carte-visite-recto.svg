@@ -48,8 +48,9 @@
   </g></symbol>
   </defs>
     <rect width="88" height="58" fill="#000a33"/>
-    <!-- bande verticale gauche (fond, jusqu'au bord) -->
-    <rect width="1.2" height="58" fill="#e97770"/>
+    <!-- bande verticale gauche : prolongée dans le fond perdu pour rester
+         visible (1,2 mm) dans la zone rognée 85×55 centrée -->
+    <rect width="2.7" height="58" fill="#e97770"/>
   <g transform="translate(1.5,1.5)">
     <!-- filet horizontal centré -->
     <line x1="24.2" y1="40.5" x2="60.8" y2="40.5" stroke="#e97770" stroke-width="0.49"/>

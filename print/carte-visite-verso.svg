@@ -48,8 +48,9 @@
   </g></symbol>
   </defs>
     <rect width="88" height="58" fill="#ffffff"/>
-    <!-- bandeau supérieur (fond, jusqu'au bord) -->
-    <rect width="88" height="0.98" fill="#e97770"/>
+    <!-- bandeau supérieur : prolongé dans le fond perdu pour rester visible
+         (0,98 mm) dans la zone rognée 85×55 centrée -->
+    <rect width="88" height="2.48" fill="#e97770"/>
   <g transform="translate(1.5,1.5)">
     <use xlink:href="#assoc-d" x="8" y="6.5" width="14" height="11.86"/>
     <use xlink:href="#bia-d" x="59" y="9" width="20" height="7.55"/>
