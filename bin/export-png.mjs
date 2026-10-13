@@ -1,0 +1,32 @@
+// Rasterises the print faces (print/*.svg) to flattened PNGs at print DPI.
+//
+//   node bin/export-png.mjs
+//
+// Fonts: @resvg/resvg-js cannot read woff2, so the (subset) Source Sans Pro
+// TTFs in assets/fonts/ are passed explicitly. The SVGs themselves also embed
+// the fonts for other renderers.
+import fs from "node:fs";
+import path from "node:path";
+import { Resvg } from "@resvg/resvg-js";
+
+const root = process.cwd();
+const DPI = 300;
+const CARD_MM = { w: 88, h: 58 };
+
+const fontFiles = ["400-latin", "400-italic-latin", "700-latin", "900-latin"].map((n) =>
+  path.join(root, "assets/fonts", `source-sans-pro-${n}.ttf`),
+);
+
+const widthPx = Math.round((CARD_MM.w / 25.4) * DPI); // 1039 px @ 300 dpi
+
+for (const face of ["recto", "verso"]) {
+  const svg = fs.readFileSync(path.join(root, "print", `carte-visite-${face}.svg`));
+  const resvg = new Resvg(svg, {
+    fitTo: { mode: "width", value: widthPx },
+    font: { loadSystemFonts: false, fontFiles },
+  });
+  const rendered = resvg.render();
+  const out = path.join(root, "print", `carte-visite-${face}.png`);
+  fs.writeFileSync(out, rendered.asPng());
+  console.log(`wrote print/carte-visite-${face}.png (${rendered.width}×${rendered.height} px @ ${DPI} dpi)`);
+}

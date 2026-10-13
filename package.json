@@ -12,6 +12,7 @@
     "typecheck": "tsc -p tsconfig.tools.json",
     "pics": "tsx pics.ts",
     "styles": "tsx bin/compare-styles.ts",
+    "png": "node bin/export-png.mjs",
     "format": "prettier --log-level warn --write ."
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "puppeteer": "^25.13.0"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@sveltejs/adapter-static": "^4.0.0",
     "@sveltejs/enhanced-img": "^1.0.0",
     "@sveltejs/kit": "^3.0.0",
