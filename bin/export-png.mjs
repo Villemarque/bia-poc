@@ -1,6 +1,6 @@
 // Rasterises the print faces (print/*.svg) to flattened PNGs at print DPI.
 //
-//   node bin/export-png.mjs
+//   node bin/export-png.mjs [dpi]     # default 600
 //
 // Fonts: @resvg/resvg-js cannot read woff2, so the (subset) Source Sans Pro
 // TTFs in assets/fonts/ are passed explicitly. The SVGs themselves also embed
@@ -11,7 +11,7 @@ import zlib from "node:zlib";
 import { Resvg } from "@resvg/resvg-js";
 
 const root = process.cwd();
-const DPI = 300;
+const DPI = parseInt(process.argv[2] || "600", 10);
 const CARD_MM = { w: 88, h: 58 };
 
 // Insert a pHYs chunk (physical pixel density) so the PNG declares its DPI.
