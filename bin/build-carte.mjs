@@ -28,6 +28,7 @@
 // v14 = v13 with the coral edge bands extended into the bleed so they stay
 //   visible (recto left band 1.2 mm, verso top band 0.98 mm) inside the
 //   trimmed 85×55 area
+// (fonts are embedded as base64 data URIs — self-contained / print-ready)
 //
 //   node bin/build-carte.mjs
 import fs from "node:fs";
@@ -61,7 +62,15 @@ const defs = [
   symbol("bia-w", "assets/bia.svg", "#ffffff"),
 ].join("\n    ");
 
-const STYLE = `    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900&amp;display=swap");`;
+// Self-hosted Source Sans Pro embedded as base64 (data URIs) so the SVGs are
+// fully self-contained / print-ready (no external font request).
+const STYLE = read("static/fonts/source-sans-pro.css").replace(
+  /url\("\/fonts\/([^"]+)"\)/g,
+  (_, name) =>
+    `url("data:font/woff2;base64,${fs
+      .readFileSync(path.join(root, "static/fonts", name))
+      .toString("base64")}")`,
+);
 
 // card / safe-area geometry
 const CARD_W = 88, CARD_H = 58; // full card (bleed) size
