@@ -39,6 +39,11 @@
 			<ul
 				><li>© Solal LORCY, CCA 3.0</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li
 					><a href="https://github.com/Villemarque/bia-poc">Source code</a></li
+				><li
+					><a
+						href={`https://github.com/Villemarque/bia-poc/commit/${__COMMIT__}`}
+						title="Commit {__COMMIT__}">{__COMMIT__}</a
+					></li
 				></ul
 			>
 		</div>
